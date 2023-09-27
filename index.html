@@ -9,21 +9,31 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- font awosome -->
+    <script src="https://kit.fontawesome.com/0d6ed94a1b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <!-- header start -->
     <header>
 
-        <img src="#" alt="logo">
+        <div class="logo-content">
+            <img src="./asset/image/logo.png" alt="logo">
+            <h1>Web Academy</h1>
+        </div>
+
 
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#learn">Learn</a>
             <a href="#contact">Contact</a>
-            <a onclick="login()" href="#">sign in</a>
+            <a id="navbar-login" onclick="login()" href="#">sign in</a>
         </nav>
+
+        <div class="profil">
+            <a id="profil-login" onclick="login()" href="#">sign in</a>
+            <img id="login-display" src="./asset/image/poto_profil.png" alt="profil">
+        </div>
 
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
@@ -33,7 +43,7 @@
     <!-- header end -->
 
     <!-- main start -->
-    <main>
+    <main aria>
 
         <section id="home">
 
@@ -60,12 +70,13 @@
 
     <!-- footer start -->
     <footer>
-
+        
     </footer>
     <!-- footer start -->
 
     <!-- script -->
-    <script src="./script/script.js"></script>
+    <script src="./script/login.js"></script>
+    <script src="./scriptnavbar.js/"></script>
 
 </body>
 </html>

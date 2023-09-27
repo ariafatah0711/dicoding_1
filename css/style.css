@@ -1,0 +1,105 @@
+/* html */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255, 255, 255, 0.3);
+    --brd: 1px solid black;
+    
+    --border: .1rem solid rgba(0, 0, 0, 0.2);
+    --bg: #fff;
+}
+
+* {
+    font-family: 'Poppins', Tahoma ,sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: none;
+}
+
+html {
+    font-size: 75%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+body {
+
+}
+
+/* header */
+header {
+    height: 5rem; width: 100%;
+    padding: 2.5rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: var(--bg);
+    border-bottom: var(--border);
+    font-size: 1.2rem;
+
+    border: var(--brd);
+}
+
+.navbar {
+    display: flex; gap: 1rem;
+}
+
+.logo-content {
+    display: flex; flex-wrap: nowrap; align-items: center;
+}
+
+.profil {
+    min-width: 5rem;
+    max-width: 5rem;
+}
+
+#menu-btn, #navbar-login {
+    display: none;
+}
+
+#login-display {
+    /* display: none; */
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+.icons, #login-display {
+    display: none;
+    font-size: 2.5rem;
+}
+
+/* media quaries */
+@media (max-width:991px) {
+
+}
+
+@media (max-width:768px) {
+    html {font-size: 60%;}
+    .icons, #menu-btn, #navbar-login {
+        display: flex;
+    }
+    .navbar, #profil-login, #login-display {
+        display: none !important;
+    }
+}
+
+@media (max-width:450px) {
+    html {font-size: 45%;}
+}
+
+
+/* ###### */
+img {
+    height: 5rem !important;
+}
+
+/* div, .navbar {border: var(--brd);} */
