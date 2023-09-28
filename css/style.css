@@ -1,15 +1,16 @@
-/* html */
+/* ==================== html ==================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root {
+    /* border */
+    --brd: 1px solid black;    
+    --border: .1rem solid rgba(0, 0, 0, 0.3);
+
+    /* color */
+    --bg: #ffffff;
+    --bgblue: #0b2149;
     --main-color: #d3ad7f;
-    --black: #13131a;
-    --bg: #010103;
-    --border: .1rem solid rgba(255, 255, 255, 0.3);
-    --brd: 1px solid black;
-    
-    --border: .1rem solid rgba(0, 0, 0, 0.2);
-    --bg: #fff;
+    --txt: #1865f2;
 }
 
 * {
@@ -19,7 +20,8 @@
     outline: none; border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: none;
+    user-select: none;
+    /* transition: all 0.2s linear; */
 }
 
 html {
@@ -29,11 +31,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-
-}
-
-/* header */
+/* =============== header =============== */
 header {
     height: 5rem; width: 100%;
     padding: 2.5rem 7%;
@@ -45,61 +43,208 @@ header {
     background: var(--bg);
     border-bottom: var(--border);
     font-size: 1.2rem;
-
-    border: var(--brd);
+    z-index: 100;    
 }
 
-.navbar {
+/* navbar */
+header .navbar {
     display: flex; gap: 1rem;
 }
-
-.logo-content {
-    display: flex; flex-wrap: nowrap; align-items: center;
+header .navbar a, .profil a::after {position: relative;}
+header .navbar a::after{
+    content: "";
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0;
+    height: 0.2rem;
+    background: var(--main-color);
+    transition: width 0.3s ease;
 }
 
-.profil {
-    min-width: 5rem;
-    max-width: 5rem;
+/* hover nav */
+header a:hover {color: var(--main-color) !important;}
+header .navbar a:hover::after{width: 100%;}
+header .navbar, .profil {font-size: 1.5rem; font-weight: bold;}
+header a:visited, header a {color: var(--txt);}
+header .navbar a.active::after{width: 100%;}
+header img {height: 4.75rem; cursor: pointer;}
+
+/* =============== main =============== */
+main {
+    height: auto; width: 100%;
+    padding: 5rem 7%;
+    padding-bottom: 0;
+    display: flex; flex-wrap: wrap;
+
+    border: var(--brd);
+    border-color: red;
+}
+.container {
+    height: auto; width: 100%;
+    display: flex;
+
+    border-left: var(--brd);
+    border-bottom: var(--brd);
+}
+.heading {
+    height: 5rem; width: 100%;
+    font-size: 2rem; font-weight: 700;
+    line-height: 2.5rem; letter-spacing: 0.1rem;
+    display: flex; justify-content: center; align-items: center;
+    text-transform: capitalize;
+
+    /* border: var(--brd); */
+}
+.heading span {
+    margin-left: 1rem;
+    color: var(--main-color);
 }
 
-#menu-btn, #navbar-login {
-    display: none;
+/* ========== home ========== */
+.home {
+    height: calc(100vh - 5rem);
+    padding-bottom: 4rem;
+    gap: 2.5rem;
+    background: #fff;
 }
 
-#login-display {
-    /* display: none; */
-    border-radius: 50%;
-    padding: 0.5rem;
+.home div {
+    height: 40rem;
+    margin: auto;
+    display: flex; flex-grow: 1;
 }
 
-.icons, #login-display {
-    display: none;
-    font-size: 2.5rem;
+.home .image {height: 100%; width: 40rem;}
+.home img {
+    height: 40rem; width: 40rem;
+    object-fit: contain;
+    padding: 2rem;
+    margin: auto;
+}
+
+.home .content {
+    height: auto; width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.home .content h1 {
+    font-size: 2.8rem; font-weight: 500;
+    line-height: 2.8rem; letter-spacing: 0.1rem;
+}
+.home .content p {
+    font-size: 1.4rem;
+    opacity: 0.9;
+    line-height: 2.5rem;
+    margin: 1.5rem auto;
+}
+
+.home .content .button {
+    height: 6rem; width: 100%;
+    display: flex; align-items: center; gap: 1rem;
+    flex-wrap: wrap;
+}
+.home .content button {
+    height: 4rem; width: 20rem;
+    font-size: 1.5rem; text-align: center; font-weight: bolder;
+    display: flex; align-items: center; justify-content: center;
+    color: #ffffff; background: var(--txt);
+    border: none; border-radius: 0.25rem;
+    cursor: pointer;
+}
+.home .content button:hover::after {
+    content: " ";
+    height: 4rem; width: 20rem;
+    padding: 0.1rem;
+    position: absolute;
+    border: 0.2rem solid var(--txt); border-radius: 0.5rem;
+}
+
+/* about */
+.about {
+    height: 200vh; width: 100%;
+    padding: 2rem 0;
+}
+
+/* learn */
+.learn {
+    height: 200vh; width: 100%;
+    padding: 2rem 0;
+}
+
+/* contact */
+.contact {
+    height: calc(100vh - 5rem); width: 60%;
+    padding: 2rem 0;
+}
+
+aside {
+    height: calc(100vh - 5rem); width: 39%;
+    padding: 2rem 0;
+
+    border-left: var(--brd);
+}
+
+/* =============== footer =============== */
+footer {
+    height: 5rem; width: 100%;
+    display: flex;
+    background: var(--bgblue);
+}
+footer h1 {
+    color: #8295BA; opacity: 0.9;
 }
 
 /* media quaries */
+/* ==================== media quaries ==================== */
 @media (max-width:991px) {
+    html {font-size: 70%;}
 
+    /* main */
+    .home img {
+        height: 30rem;
+    }
 }
 
 @media (max-width:768px) {
     html {font-size: 60%;}
-    .icons, #menu-btn, #navbar-login {
-        display: flex;
+    /* ===== header ======*/
+    header .navbar {
+        position: absolute;
+        top: 102%; right: -100%;
+        height: calc(100vh - 5rem); width: 30rem;
+        display: flex; flex-wrap: wrap;
+        align-items: flex-start; align-content: flex-start;
+        transition: all 0.2s linear;
+        background: #efefef;
     }
-    .navbar, #profil-login, #login-display {
-        display: none !important;
+    header .navbar a {
+        color: var(--txt);
+        display: block;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+        width: 100%;
     }
+    header .active {
+        right: 0;
+    }
+
+    /* ===== main ===== */
+    /* home */
+    .home {flex-wrap: wrap;}
+    .home .image {height: auto;}
+    .home img {margin-left: 0;}
+    .home .content {margin-top: -2.5rem;}
 }
 
 @media (max-width:450px) {
-    html {font-size: 45%;}
+    html {font-size: 50%;}
 }
 
+@media (max-width:350px) {
+    html {visibility: hidden;}
+}
 
 /* ###### */
-img {
-    height: 5rem !important;
-}
-
+/* img {height: 5rem !important;} */
 /* div, .navbar {border: var(--brd);} */

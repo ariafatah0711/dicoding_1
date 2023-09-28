@@ -7,6 +7,7 @@
     <!-- icon -->
     <link rel="icon" href="" type="image/x-icon">
     <!-- css -->
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/style.css">
     <!-- font awosome -->
     <script src="https://kit.fontawesome.com/0d6ed94a1b.js" crossorigin="anonymous"></script>
@@ -27,11 +28,12 @@
             <a href="#about">About</a>
             <a href="#learn">Learn</a>
             <a href="#contact">Contact</a>
-            <a id="navbar-login" onclick="login()" href="#">sign in</a>
+            <a id="navbar-login" onclick="login()">sign in</a>
+            <a id="navbar-logout" onclick="logout()" class="on">logout</a>
         </nav>
 
         <div class="profil">
-            <a id="profil-login" onclick="login()" href="#">sign in</a>
+            <a id="profil-login" onclick="login()">sign in</a>
             <img id="login-display" src="./asset/image/poto_profil.png" alt="profil">
         </div>
 
@@ -43,26 +45,56 @@
     <!-- header end -->
 
     <!-- main start -->
-    <main aria>
+    <main>
 
-        <section id="home">
+        <section id="home" class="container home">
+            <div class="image">
+                <!-- <img src="./asset/image/poto_profil.png" alt="image"> -->
+                <img src="https://camo.githubusercontent.com/33638daa57fac6d848ecc4ffcd2ed24ac47b505d196f62f7772e969087a0da4e/68747470733a2f2f7374617469632e636f6c6c65637475692e636f6d2f73686f74732f333834383931342f70726f6772616d6d65722d74686f6d61732d6c61726765" alt="image">
+            </div>
+            <div class="content">
+                <h1>
+                    untuk semua siswa,<br>
+                    semua kelas,<br>
+                    hasil nyata
+                </h1>
+                <p>
+                    Ini adalah Website belajar coding yang diperuntukan untuk pemula,
+                    yang ingin belajar web developer.
+                </p>
+                <div class="button">
+                    <!-- <a href="#about">
+                        <button>I'am Beginner</button>
+                    </a>
+                    <a href="#learn">
+                        <button>I'am Expert</button>
+                    </a> -->
+                    <a href="#about">
+                        <button>Get Started</button>
+                    </a>
+                    <a href="#contact" onclick="login()">
+                        <button id="btn-signup">Sign-Up</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about" class="container about">
+            <h1 class="heading">mengapa harus <span>web academy</span></h1>
 
         </section>
 
-        <section id="about">
+        <section id="learn" class="container learn">
+            <h1 class="heading">learn <span>get started</span></h1>
+        </section>
+
+        <section id="contact" class="container contact">
+            <h1 class="heading">contact <span>me</span></h1>
 
         </section>
 
-        <section id="learn">
-
-        </section>
-
-        <section id="contact">
-
-        </section>
-
-        <aside>
-
+        <aside class="aside">
+            <h1 class="heading">profil <span>me</span></h1>
         </aside>
 
     </main>
@@ -70,13 +102,14 @@
 
     <!-- footer start -->
     <footer>
-        
+        <h1 class="heading">by <span>&copy;ariafatah</span></h1>
     </footer>
     <!-- footer start -->
 
     <!-- script -->
+    <script src="./script/script.js"></script>
     <script src="./script/login.js"></script>
-    <script src="./scriptnavbar.js/"></script>
+    <script src="./script/navbar.js/"></script>
 
 </body>
 </html>
