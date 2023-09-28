@@ -83,7 +83,7 @@ main {
     height: auto; width: 100%;
     display: flex;
 
-    border-left: var(--brd);
+    /* border-left: var(--brd); */
     border-bottom: var(--brd);
 }
 .heading {
@@ -99,6 +99,8 @@ main {
     margin-left: 1rem;
     color: var(--main-color);
 }
+h1 {text-transform: capitalize;}
+p {text-transform: none;}
 
 /* ========== home ========== */
 .home {
@@ -161,9 +163,47 @@ main {
 
 /* about */
 .about {
-    height: 200vh; width: 100%;
+    height: auto; width: 100%;
     padding: 2rem 0;
+    display: flex; flex-direction: column;
 }
+.about .container {
+    height: calc(100vh - 20rem);
+    margin: 2rem 0 5rem;
+    display: flex;
+
+    border: var(--brd);
+}
+.about .container:nth-child(2)~.container {
+    height: calc(100vh - 15rem);   
+}
+.about .container:nth-child(2) {
+    display: grid; flex-direction: row;
+    grid-template-columns: repeat(3, calc(100% / 3));
+    gap: 0; justify-content: flex-start;
+}
+.about .container:nth-child(2) .content {
+    margin-top: -6rem;
+    display: flex; justify-content: center; flex-direction: column;
+    align-items: center; gap: 1rem 0; text-align: center;
+
+    /* border: var(--brd); */
+    /* border-color: red; */
+}
+.about .container:nth-child(2) .content img {height: 10rem;}
+.about .container:nth-child(2) .content h1 {font-size: 1.8rem;}
+.about .container:nth-child(2) .content p {font-size: 1.3rem;}
+
+
+
+
+
+
+
+
+
+
+
 
 /* learn */
 .learn {
@@ -173,12 +213,12 @@ main {
 
 /* contact */
 .contact {
-    height: calc(100vh - 5rem); width: 60%;
+    height: calc(100vh - 5rem- 5rem); width: 60%;
     padding: 2rem 0;
 }
 
 aside {
-    height: calc(100vh - 5rem); width: 39%;
+    height: calc(100vh - 5rem - 5rem); width: 39%;
     padding: 2rem 0;
 
     border-left: var(--brd);
@@ -242,9 +282,11 @@ footer h1 {
 }
 
 @media (max-width:350px) {
-    html {visibility: hidden;}
+    /* html {visibility: hidden;} */
+    html {font-size: 40%;}
 }
 
 /* ###### */
 /* img {height: 5rem !important;} */
+img {height: 100%;}
 /* div, .navbar {border: var(--brd);} */
