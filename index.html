@@ -28,13 +28,13 @@
             <a href="#about">About</a>
             <a href="#learn">Learn</a>
             <a href="#contact">Contact</a>
-            <a id="navbar-login" onclick="login()">sign in</a>
+            <a id="navbar-login" href="#login">sign in</a>
             <a id="navbar-logout" onclick="logout()" class="on">logout</a>
         </nav>
 
         <div class="profil">
-            <a id="profil-login" onclick="login()">sign in</a>
-            <img id="login-display" src="./asset/image/poto_profil.png" alt="profil">
+            <a id="profil-login" href="#login">sign in</a>
+            <img id="login-display" src="" alt="">
         </div>
 
         <div class="icons">
@@ -66,7 +66,7 @@
                     <a href="#learn">
                         <button>Get Started</button>
                     </a>
-                    <a href="#contact" onclick="login()">
+                    <a href="#login">
                         <button id="btn-signup">Sign-Up</button>
                     </a>
                 </div>
@@ -84,7 +84,7 @@
                 <div class="content">
                     <img src="./asset/image/poto_profil.png" alt="image">
                     <h1>akses gratis</h1>
-                    <p>belajar coding gratis tanpa dipungut biaya apapun</p>
+                    <p>Siswa berlatih dengan temponya sendiri. Mereka mulai dengan memahami hal-hal yang belum mereka mengerti, lalu mempercepat pembelajaran.</p>
                 </div>
                 <div class="content">
                     <img src="./asset/image/poto_profil.png" alt="image">
@@ -113,8 +113,26 @@
 
         </section>
 
-        <aside class="aside">
+        <aside class="aside" id="login">
             <h1 class="heading">profil <span>me</span></h1>
+            <div class="content login">
+                <h1>Sign In</h1>
+                <form id="form">
+                    <label for="username">username: </label>
+                    <input id="username" type="text" spellcheck="false" required 
+                    name="input" placeholder="username / github" value="">
+                    <label for="password">password: </label>
+                    <input id="password" type="password" spellcheck="false" required 
+                    name="input" placeholder="password / bebas">
+                    <button type="submit" onclick="login()">Masuk</button>
+                </form>
+            </div>
+            <div class="content profil">
+                <div class="">
+                    <h1>Profil Me</h1>
+                    <img src="./asset/image/poto_profil.png" alt="">
+                </div>
+            </div>
         </aside>
 
     </main>
@@ -127,6 +145,7 @@
     <!-- footer start -->
 
     <!-- script -->
+    <script src="./script/image-github.js"></script>
     <script src="./script/script.js"></script>
     <script src="./script/login.js"></script>
     <script src="./script/navbar.js/"></script>
