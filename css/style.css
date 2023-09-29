@@ -226,40 +226,27 @@ p {text-transform: none;}
 }
 .contact h1 {margin-bottom: 0.5rem;}
 
-
 /* aside */
 aside {
     height: calc(100vh - 5rem - 5rem); width: 39%;
     padding: 0.5rem 0 0 0;
     display: flex;
     flex-direction: column;
-
-    border: var(--brd);
 }
 aside h1.heading {margin-bottom: 0.5rem; background: #8295BA;}
+aside h1.heading:hover {background: var(--main-color);}
+aside h1.heading:hover span {color: #8295BA;}
 aside .content {
     height: 10%; width: 100%;
     padding: 0 5%; margin-bottom: 0.5rem;
     display: flex; flex-grow: 1;
-
-    border: var(--brd);
 }
 
-/* login */
-aside .login{
-    display: flex; flex-direction: column;
-    background: var(--main-color);
-
-    display: none;
-}
-/* aside .login h1 {} */
-aside .login form {
+aside form {
     display: flex; flex-direction: column; flex-grow: 1;
     padding-bottom: 5%;
-
-    /* border: var(--brd); */
 }
-aside .login label {
+aside label {
     font-size: 1.35rem; padding-top: 0.5rem;
     display: flex; 
 }
@@ -270,7 +257,8 @@ input {
     display: flex; border-radius: 0.5rem;
     background: #efefef;
 }
-aside .login button {
+input:focus {background: #8295BA;}
+aside button {
     height: 3rem; width: 100%;
     margin: 5% auto 0 auto;
     display: flex; justify-content: center; align-items: center;
@@ -278,7 +266,7 @@ aside .login button {
     position: relative; /* wajib relativ agar after tidak ::erorr */
     background: var(--txt); color: white;
 }
-aside .login button:hover::after {
+aside button:hover::after {
     content: " ";
     height: 3rem; width: inherit;
     padding: 0.1rem;
@@ -286,17 +274,33 @@ aside .login button:hover::after {
     border: 0.2rem solid var(--txt); border-radius: 0.5rem;
 }
 
-/* profill */
-aside .profil{
-    /* display: none; */
-
-
-
+/* login */
+aside .login{
     display: flex; flex-direction: column;
+
+    /* background: var(--main-color); */
 }
 
+/* profill */
+aside .user{
+    display: flex; flex-direction: column;
+    padding: 1rem 2rem;
+    display: none;
+}
 
-aside img {height: 10rem;}
+aside .user-1 {
+    height: auto; width: 100%;
+    display: flex; overflow: hidden;
+}
+aside .user-1 .content {
+    display: grid; grid-template-columns: auto 100%;
+    gap: 1% 5%;
+    height: 100%;
+}
+aside .user-1 img {height: 10rem; border-radius: 50%;}
+aside .user-1 i {margin: auto; transform: scale(0.9);}
+aside .user-1 h1 {font-size: 1.5rem; font-weight: 400; flex-grow: 1; display: flex; align-items: center;}
+aside .user-1 h2 {font-size: 1.2rem; font-weight: 400; flex-grow: 1; display: flex; align-items: center;}
 
 /* =============== footer =============== */
 footer {
@@ -318,6 +322,7 @@ footer h1 {
     .home img {
         height: 30rem;
     }
+    aside .user-1 img {height: 7rem;}
 }
 
 @media (max-width:768px) {
@@ -373,7 +378,8 @@ footer h1 {
     aside {
         height: calc(70vh - 5rem); width: 100%;
     }
-    aside .login form {padding-right: 35%;}
+    aside form {padding-right: 35%;}
+    aside .user-1 img {height: 8rem;}
 }
 
 @media (max-width:450px) {

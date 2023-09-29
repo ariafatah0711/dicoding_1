@@ -1,14 +1,15 @@
 // header
-const navbarLogin = document.getElementById(`navbar-login`);
-const profilLogin = document.getElementById(`profil-login`);
-const loginDisplay = document.getElementById(`login-display`);
-const btnSignUp = document.getElementById(`btn-signup`);
+let navbarLogin = document.getElementById(`navbar-login`);
+let profilLogin = document.getElementById(`profil-login`);
+let loginDisplay = document.getElementById(`login-display`);
+let btnSignUp = document.getElementById(`btn-signup`);
 
-const navbarLogOut = document.getElementById(`navbar-logout`);
+let navbarLogOut = document.getElementById(`navbar-logout`);
 navbarLogOut.style.display = "none";
 
 // form
-// const password = document.getElementById(`password`).value;
+let divLogin = document.querySelector(`.login`);
+let divUser = document.querySelector(`.user`);
 
 // login
 let alredyLog = false;
@@ -21,6 +22,9 @@ const Method = {
     profilLogin.style.display = "none";
     loginDisplay.style.display = "flex";
     navbarLogOut.classList.toggle("of");
+
+    divLogin.style.display = "none";
+    divUser.style.display = "flex";
   },
   hide: function () {
     navbarLogin.textContent = "sign in";
@@ -28,6 +32,9 @@ const Method = {
     profilLogin.style.display = "flex";
     loginDisplay.style.display = "none";
     navbarLogOut.classList.toggle("of");
+
+    divLogin.style.display = "flex";
+    divUser.style.display = "none";
   },
   reset: function () {
     loginDisplay.src = "";
@@ -40,24 +47,18 @@ function login() {
   var password = document.getElementById(`password`).value;
   window.username = username;
   if (alredyLog === false && username !== "" && password !== "") {
+    console.log("login");
     profilLogin.style.display = "none";
 
-    loadContent();
+    load();
+    // loadContent();
     Method.show();
 
     alredyLog = true;
-  } else if (username === "" || password === "") {
-    // console.info("username / password belum lengkap");
   } else {
-    // console.info("gagal login")
+    console.log("login error");
   }
 }
-
-// form-submit
-document.getElementById("form").addEventListener("submit", function () {
-  event.preventDefault();
-  login();
-});
 
 // log out
 function logout() {
@@ -75,18 +76,3 @@ function logout() {
     }
   }
 }
-
-// login display => href to contact
-loginDisplay.onclick = () => {
-  location.href = "#contact";
-};
-
-// reload
-function clearInput() {
-  let input = document.querySelectorAll(`input`);
-  for (let inputs of input) {
-    inputs.value = "";
-  }
-}
-
-window.onload = clearInput();

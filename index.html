@@ -55,7 +55,7 @@
             <div class="content">
                 <h1>
                     untuk semua siswa,<br>
-                    semua kelas,<br>
+                    semua Bahasa,<br>
                     hasil nyata
                 </h1>
                 <p>
@@ -125,12 +125,34 @@
                     <input id="password" type="password" spellcheck="false" required 
                     name="input" placeholder="password / bebas">
                     <button type="submit" onclick="login()">Masuk</button>
+                    <!-- <button onclick="Method.show()">Show</button> -->
                 </form>
             </div>
-            <div class="content profil">
-                <div class="">
-                    <h1>Profil Me</h1>
-                    <img src="./asset/image/poto_profil.png" alt="">
+            <div class="content user">
+                <div class="user-1">
+                    <figure>
+                        <img id="user-image" src="./asset/image/poto_profil.png" alt="">
+                        <figcaption id="fig-username">ariafatah0711</figcaption>
+                        <figcaption id="fig-bio">Just Learn Coding</figcaption>
+                    </figure>
+                    <div class="content fa-2x">
+                        <i class="fa-solid fa-user"></i><h1 id="user-username">ariafatah0711</h1>
+                        <i class="fa-solid fa-info-circle "></i><h2 id="user-bio">Just Learn Coding</h1>
+                        <i class="fa-solid fa-location-dot"></i><h2 id="user-location">Depok, Jawa Barat</h2>
+                        <i class="fa-solid fa-building"></i><h2 id="user-company"> - </h2>
+                    </div>
+                </div>
+                <div class="user-2">
+                    <form id="form">
+                        <label for="username">username: </label>
+                        <input id="username" type="text" spellcheck="false" required 
+                        name="input" placeholder="username / github" value="">
+                        <label for="password">password: </label>
+                        <input id="password" type="password" spellcheck="false" required 
+                        name="input" placeholder="password / bebas">
+                        <button type="submit" onclick="cn()">Change</button>
+                        <button onclick="logout()">Log Out</button>
+                    </form>
                 </div>
             </div>
         </aside>
@@ -145,7 +167,7 @@
     <!-- footer start -->
 
     <!-- script -->
-    <script src="./script/image-github.js"></script>
+    <script src="./script/user.js"></script>
     <script src="./script/script.js"></script>
     <script src="./script/login.js"></script>
     <script src="./script/navbar.js/"></script>
