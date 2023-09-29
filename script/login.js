@@ -11,7 +11,6 @@ navbarLogOut.style.display = "none";
 let divLogin = document.querySelector(`.login`);
 let divUser = document.querySelector(`.user`);
 
-// login
 let alredyLog = false;
 
 // method
@@ -25,6 +24,12 @@ const Method = {
 
     divLogin.style.display = "none";
     divUser.style.display = "flex";
+
+    let user = document.getElementById("username")
+    let pass = document.getElementById("password")
+    user.value = username
+    pass.value = password
+    formPassword.value = password;
   },
   hide: function () {
     navbarLogin.textContent = "sign in";
@@ -36,28 +41,33 @@ const Method = {
     divLogin.style.display = "flex";
     divUser.style.display = "none";
   },
-  reset: function () {
-    loginDisplay.src = "";
-  },
 };
 
 // login => untuk simulasi login dan menampilkan logo profil
-function login() {
-  var username = document.getElementById(`username`).value;
-  var password = document.getElementById(`password`).value;
-  window.username = username;
-  if (alredyLog === false && username !== "" && password !== "") {
-    console.log("login");
-    profilLogin.style.display = "none";
+function login(log = true) {
+  if (log) {
+    var username = document.getElementById(`username`).value;
+    var password = document.getElementById(`password`).value;
+    window.username = username;
+    window.password = password;
+    if (alredyLog === false && username !== "" && password !== "") {
+      profilLogin.style.display = "none";
 
-    load();
-    // loadContent();
-    Method.show();
-
-    alredyLog = true;
-  } else {
-    console.log("login error");
+      loadContent();
+      alredyLog = true;
+    }
+  } else if (!log) {
+    var username = document.getElementById(`form-username`).value;
+    var password = document.getElementById(`form-password`).value;
+    window.username = username;
+    window.password = password;
+    loadContent();
   }
+}
+
+// change
+function change() {
+  login(false);
 }
 
 // log out
@@ -68,7 +78,6 @@ function logout() {
     if (exit) {
       // hide
       Method.hide();
-      Method.reset();
 
       alredyLog = false;
     } else {

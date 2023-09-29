@@ -114,43 +114,42 @@
         </section>
 
         <aside class="aside" id="login">
-            <h1 class="heading">profil <span>me</span></h1>
+            <h1 class="heading" title="username: diisi dengan username github" >profil <span>me</span></h1>
             <div class="content login">
                 <h1>Sign In</h1>
-                <form id="form">
+                <form id="form-1" class="form">
                     <label for="username">username: </label>
-                    <input id="username" type="text" spellcheck="false" required 
-                    name="input" placeholder="username / github" value="">
+                    <input id="username" type="text" spellcheck="false" required
+                    name="input" placeholder="username github" value="">
                     <label for="password">password: </label>
-                    <input id="password" type="password" spellcheck="false" required 
+                    <input id="password" type="password" spellcheck="false" required
                     name="input" placeholder="password / bebas">
                     <button type="submit" onclick="login()">Masuk</button>
-                    <!-- <button onclick="Method.show()">Show</button> -->
                 </form>
             </div>
             <div class="content user">
                 <div class="user-1">
                     <figure>
-                        <img id="user-image" src="./asset/image/poto_profil.png" alt="">
-                        <figcaption id="fig-username">ariafatah0711</figcaption>
-                        <figcaption id="fig-bio">Just Learn Coding</figcaption>
+                        <img id="user-image" src="" alt="">
+                        <figcaption id="fig-username"> - </figcaption>
+                        <figcaption id="fig-bio"> - </figcaption>
                     </figure>
                     <div class="content fa-2x">
-                        <i class="fa-solid fa-user"></i><h1 id="user-username">ariafatah0711</h1>
-                        <i class="fa-solid fa-info-circle "></i><h2 id="user-bio">Just Learn Coding</h1>
-                        <i class="fa-solid fa-location-dot"></i><h2 id="user-location">Depok, Jawa Barat</h2>
+                        <i class="fa-solid fa-user"></i><h1 id="user-username"> - </h1>
+                        <i class="fa-solid fa-info-circle "></i><h2 id="user-bio"> - </h1>
+                        <i class="fa-solid fa-location-dot"></i><h2 id="user-location"> - </h2>
                         <i class="fa-solid fa-building"></i><h2 id="user-company"> - </h2>
                     </div>
                 </div>
                 <div class="user-2">
-                    <form id="form">
-                        <label for="username">username: </label>
-                        <input id="username" type="text" spellcheck="false" required 
-                        name="input" placeholder="username / github" value="">
-                        <label for="password">password: </label>
-                        <input id="password" type="password" spellcheck="false" required 
-                        name="input" placeholder="password / bebas">
-                        <button type="submit" onclick="cn()">Change</button>
+                    <form id="form-2" class="form">
+                        <label for="form-username">username: </label>
+                        <input id="form-username" type="text" spellcheck="false" required 
+                        name="input" placeholder="">
+                        <label for="form-password">password: </label>
+                        <input id="form-password" type="password" spellcheck="false" required 
+                        name="input" placeholder="">
+                        <button type="submit" onclick="change()">Change</button>
                         <button onclick="logout()">Log Out</button>
                     </form>
                 </div>

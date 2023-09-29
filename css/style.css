@@ -30,6 +30,7 @@ html {
     scroll-padding-top: 5rem;
     scroll-behavior: smooth;
 }
+a, button {cursor: pointer !important;}
 
 /* =============== header =============== */
 header {
@@ -242,7 +243,7 @@ aside .content {
     display: flex; flex-grow: 1;
 }
 
-aside form {
+aside .form {
     display: flex; flex-direction: column; flex-grow: 1;
     padding-bottom: 5%;
 }

@@ -1,14 +1,17 @@
 loginDisplay = document.getElementById(`login-display`);
 
 // form-submit
-document.getElementById("form").addEventListener("submit", function () {
+document.getElementById("form-1").addEventListener("submit", function () {
   event.preventDefault();
-  login();
+});
+
+document.getElementById("form-2").addEventListener("submit", function () {
+  event.preventDefault();
 });
 
 // login display => href to contact
 loginDisplay.onclick = () => {
-  location.href = "#contact";
+  location.href = "#login";
 };
 
 // reload
