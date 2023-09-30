@@ -79,12 +79,9 @@ function logout() {
     let exit = confirm(`anda yakin ingin logout?`);
 
     if (exit) {
-      // hide
+      console.info(`keluar dengan ${username} telah berhasil!`);
       Method.hide();
-
       alredyLog = false;
-    } else {
-      //
     }
   }
 }
