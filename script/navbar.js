@@ -3,7 +3,29 @@ let navbar = document.querySelector(`.navbar`);
 let navbarA = document.querySelectorAll(`.navbar a`);
 
 let aAll = document.querySelectorAll(`a`);
-let a6_9 = [aAll[6], aAll[7], aAll[8], aAll[9]]; // elemen indeks ke 6 ~
+console.log(aAll);
+let a6_9 = [
+  aAll[6],
+  aAll[7],
+  aAll[8],
+  aAll[9],
+  aAll[10],
+  aAll[11],
+  // aAll[12],
+  // aAll[13],
+]; // elemen indeks ke 6 ~
+
+var aIndex6;
+for (const a of aAll) {
+  for (const i in aAll) {
+    if (a[i] === a[0]) {
+      continue;
+    } else {
+      console.log(a[i]);
+      aIndex6 += a[i];
+    }
+  }
+}
 
 // ===== NAVBAR =====
 const Button = {
