@@ -87,3 +87,6 @@ function logout() {
     }
   }
 }
+navbarLogOut.onclick = () => {
+  logout();
+};

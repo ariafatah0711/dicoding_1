@@ -2,29 +2,11 @@ let btnMenu = document.getElementById(`menu-btn`);
 let navbar = document.querySelector(`.navbar`);
 let navbarA = document.querySelectorAll(`.navbar a`);
 
+// let a6_9 = [aAll[6], aAll[7], aAll[8], aAll[9], aAll[10], aAll[11]]; // elemen indeks ke 6 ~
 let aAll = document.querySelectorAll(`a`);
-console.log(aAll);
-let a6_9 = [
-  aAll[6],
-  aAll[7],
-  aAll[8],
-  aAll[9],
-  aAll[10],
-  aAll[11],
-  // aAll[12],
-  // aAll[13],
-]; // elemen indeks ke 6 ~
-
-var aIndex6;
-for (const a of aAll) {
-  for (const i in aAll) {
-    if (a[i] === a[0]) {
-      continue;
-    } else {
-      console.log(a[i]);
-      aIndex6 += a[i];
-    }
-  }
+let aIndex6 = [];
+for (let i = 5; i < aAll.length; i++) {
+  aIndex6.push(aAll[i]);
 }
 
 // ===== NAVBAR =====
@@ -59,7 +41,7 @@ for (const a of navbarA) {
   });
 }
 
-for (const a of a6_9) {
+for (const a of aIndex6) {
   a.addEventListener(`click`, () => {
     Button.remove();
   });
@@ -73,5 +55,6 @@ window.onscroll = () => navbar.classList.remove(`active`);
 
 // click => saat di click akan meremove navbar
 for (const a of aAll) {
+  if (a.id === "navbar-logout") continue;
   a.onclick = () => navbar.classList.remove(`active`);
 }
