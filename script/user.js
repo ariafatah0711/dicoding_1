@@ -11,6 +11,7 @@ let userLocation = document.getElementById(`user-location`);
 let formUsername = document.getElementById(`form-username`);
 let formPassword = document.getElementById(`form-password`);
 
+// ===== API GITHUB =====
 // defaultContent => kalo username nya tidak ditemukan akan otomatis ke github ariafatah0711
 function defaultContent() {
   var xhr = new XMLHttpRequest();

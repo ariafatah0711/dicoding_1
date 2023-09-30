@@ -13,7 +13,7 @@ let divUser = document.querySelector(`.user`);
 
 let alredyLog = false;
 
-// method
+// ===== LOGIN, CHANGE, LOGOUT =====
 const Method = {
   show: function () {
     navbarLogin.textContent = "account";
