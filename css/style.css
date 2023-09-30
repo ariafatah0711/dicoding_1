@@ -32,6 +32,22 @@ html {
     scroll-behavior: smooth;
 }
 a, button {cursor: pointer !important;}
+button {
+    height: 4rem; width: 20rem;
+    font-size: 1.5rem; text-align: center; font-weight: bolder;
+    display: flex; align-items: center; justify-content: center;
+    color: #ffffff; background: var(--txt);
+    border: none; border-radius: 0.25rem;
+    position: relative;
+    cursor: pointer;
+}
+button:hover::after {
+    content: " ";
+    height: 100%; width: 100%;
+    padding: 0.1rem;
+    position: absolute;
+    border: 0.2rem solid var(--txt); border-radius: 0.5rem;
+}
 
 /* =============== header =============== */
 header {
@@ -152,21 +168,6 @@ p {text-transform: none;}
     display: flex; align-items: center; gap: 1rem;
     flex-wrap: wrap;
 }
-.home .content button {
-    height: 4rem; width: 20rem;
-    font-size: 1.5rem; text-align: center; font-weight: bolder;
-    display: flex; align-items: center; justify-content: center;
-    color: #ffffff; background: var(--txt);
-    border: none; border-radius: 0.25rem;
-    cursor: pointer;
-}
-.home .content button:hover::after {
-    content: " ";
-    height: 4rem; width: 20rem;
-    padding: 0.1rem;
-    position: absolute;
-    border: 0.2rem solid var(--txt); border-radius: 0.5rem;
-}
 
 /* about */
 .about {
@@ -179,13 +180,10 @@ p {text-transform: none;}
     margin: 2rem 0 5rem;
     display: flex;
 
-    /* border: var(--brd); */
-    /* border-top: var(--brd); border-bottom: none; */
     border: none; 
 }
-.about .container:nth-child(2)~.container {
-    height: calc(100vh - 15rem);   
-}
+
+/* about container-1 */
 .about .container:nth-child(2) {
     display: grid; flex-direction: row;
     grid-template-columns: repeat(3, calc(100% / 3));
@@ -206,13 +204,29 @@ p {text-transform: none;}
     flex-grow: 1; opacity: 0.8;
 }
 
-
-
-
-
-
-
-
+/* about container-2 */
+.about .container:nth-child(2)~.container {
+    height: calc(100vh - 15rem);
+    display: flex;
+}
+.about .container:nth-child(2)~.container img {height: auto; width: 55%; object-fit: contain;}
+.about .container:nth-child(2)~.container .content {
+    display: flex; flex-grow: 1; width: 45%;
+    flex-direction: column; padding: 0 3rem;
+}
+.about .container:nth-child(2)~.container .content h2 {
+    display: flex; height: 15%; 
+    opacity: 0.4; padding-top: 0.5rem;
+}
+.about .container:nth-child(2)~.container .content h1 {
+    display: flex; height: 40%; font-size: 3.2rem;
+    opacity: 0.9; font-weight: 400; font-family: Tahoma;
+}
+.about .container:nth-child(2)~.container .content p {
+    display: flex; height: 20%; font-size: 1.35rem;
+    opacity: 0.85; font-weight: 500;
+}
+.about .container:nth-child(2)~.container .content div {flex-grow: 1; padding-top: 0.5rem;}
 
 
 
@@ -265,17 +279,6 @@ input:focus {background: #8295BA;}
 aside button {
     height: 3rem; width: 100%;
     margin: 5% auto 0 auto;
-    display: flex; justify-content: center; align-items: center;
-    cursor: pointer; border-radius: 0.2rem;
-    position: relative; /* wajib relativ agar after tidak ::erorr */
-    background: var(--txt); color: white;
-}
-aside button:hover::after {
-    content: " ";
-    height: 3rem; width: inherit;
-    padding: 0.1rem;
-    position: absolute;
-    border: 0.2rem solid var(--txt); border-radius: 0.5rem;
 }
 
 /* login */
@@ -325,6 +328,8 @@ footer h1 {
     .home img {
         height: 30rem;
     }
+    .about .container:nth-child(2)~.container img {width: 45%;}
+    .about .container:nth-child(2)~.container .content {width: 55%;}
     aside .user-1 img {height: 7rem;}
 }
 
@@ -372,6 +377,11 @@ footer h1 {
     .about .container:nth-child(2) .content img {height: 7rem; padding: 0;}
     .about .container:nth-child(2) .content p {flex-grow: 1;}
 
+    .about .container:nth-child(2)~.container {flex-direction: column;}
+    .about .container:nth-child(2)~.container img {width: 100%; height: 50%;}
+    .about .container:nth-child(2)~.container .content {width: 100%; flex-grow: 1;}
+    .about .container:nth-child(2)~.container .content h1 {font-size: 2.8rem;}
+    .about .container:nth-child(2)~.container .content p {font-size: 1.2rem;}
 
     /* contact */
     .contact {
@@ -398,7 +408,7 @@ footer h1 {
 /* img {height: 5rem !important;} */
 img {height: 100%;}
 /* div, .navbar {border: var(--brd);} */
-
+/* 
 .about .container:nth-child(2)~.container {
     border: var(--brd);
-}
+} */
