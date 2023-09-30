@@ -37,14 +37,13 @@ a, button {cursor: pointer !important;}
 header {
     height: 5rem; width: 100%;
     padding: 2.5rem 7%;
+    font-size: 1.2rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; align-items: center;
     position: fixed;
     top: 0; left: 0; right: 0;
     background: var(--bg);
     border-bottom: var(--border);
-    font-size: 1.2rem;
     z-index: 100;    
 }
 
@@ -52,34 +51,33 @@ header {
 header .navbar {
     display: flex; gap: 1rem;
 }
+header .navbar, .profil {font-size: 1.5rem; font-weight: bold;}
+
+/* hover a */
 header .navbar a, .profil a::after {position: relative;}
 header .navbar a::after{
-    content: "";
-    position: absolute;
+    content: ""; position: absolute;
     bottom: -3px; left: 0;
-    width: 0;
-    height: 0.2rem;
+    width: 0; height: 0.2rem;
     background: var(--main-color);
     transition: width 0.3s ease;
 }
+header .navbar a:hover::after{width: 100%;}
+header a:hover {color: var(--main-color) !important;}
+header a:visited, header a {color: var(--txt);}
+
+/* a active */
 header .navbar a.active {color: var(--main-color) !important;}
 header .navbar a.active::after {
-    content: "";
-    position: absolute;
+    content: ""; position: absolute;
     bottom: -3px; left: 0;
-    width: 100%;
-    height: 0.2rem;
+    width: 100%; height: 0.2rem;
     background: var(--main-color);
     transition: width 0.3s ease;
 }
 
-/* hover nav */
-header a:hover {color: var(--main-color) !important;}
-header .navbar a:hover::after{width: 100%;}
-header .navbar, .profil {font-size: 1.5rem; font-weight: bold;}
-header a:visited, header a {color: var(--txt);}
-header .navbar a.active::after{width: 100%;}
 header img {height: 4.75rem; cursor: pointer;}
+/* header .navbar a.active::after{width: 100%;} */
 
 /* =============== main =============== */
 main {
@@ -87,16 +85,13 @@ main {
     padding: 5rem 7%;
     padding-bottom: 0;
     display: flex; flex-wrap: wrap;
-
-    /* border: var(--brd); */
-    /* border-color: red; */
 }
 .container {
     height: auto; width: 100%;
     display: flex;
 
     /* border-left: var(--brd); */
-    border-bottom: var(--brd);
+    border-bottom: var(--brd); border-color: green;
 }
 .heading {
     height: 5rem; width: 100%;
@@ -184,9 +179,9 @@ p {text-transform: none;}
     margin: 2rem 0 5rem;
     display: flex;
 
-    border: var(--brd);
+    /* border: var(--brd); */
     /* border-top: var(--brd); border-bottom: none; */
-    /* border: none;  */
+    border: none; 
 }
 .about .container:nth-child(2)~.container {
     height: calc(100vh - 15rem);   
@@ -200,15 +195,12 @@ p {text-transform: none;}
     padding: 12.5% 2% 5% 2%;
     display: flex; justify-content: center; flex-direction: column;
     align-items: center; gap: 1rem 0; text-align: center;
-
-    /* border: var(--brd); */
-    /* border-color: red; */
 }
 .about .container:nth-child(2) .content img {
     height: 10rem; width: auto; padding: 10px;
     display: flex; object-fit: scale-down;
 }
-.about .container:nth-child(2) .content h1 {font-size: 1.8rem;}
+.about .container:nth-child(2) .content h1 {font-size: 1.6rem; font-weight: 400; opacity: 0.95;}
 .about .container:nth-child(2) .content p {
     font-size: 1.3rem; font-weight: 400;
     flex-grow: 1; opacity: 0.8;
@@ -289,7 +281,6 @@ aside button:hover::after {
 /* login */
 aside .login{
     display: flex; flex-direction: column;
-
     /* background: var(--main-color); */
 }
 
@@ -371,14 +362,14 @@ footer h1 {
     /* about */
     .about {padding: 1rem;}
     .about .container:nth-child(2) {
-        height: calc(100vh - 15rem);
+        height: calc(100vh - 15rem); padding-bottom: 0rem;
         display: flex; flex-direction: column;
     }
     .about .container:nth-child(2) .content {
         padding: 5% 0;
         height: calc(100% / 3);
     }
-    .about .container:nth-child(2) .content img {height: 6rem; padding: 0;}
+    .about .container:nth-child(2) .content img {height: 7rem; padding: 0;}
     .about .container:nth-child(2) .content p {flex-grow: 1;}
 
 
@@ -407,3 +398,7 @@ footer h1 {
 /* img {height: 5rem !important;} */
 img {height: 100%;}
 /* div, .navbar {border: var(--brd);} */
+
+.about .container:nth-child(2)~.container {
+    border: var(--brd);
+}

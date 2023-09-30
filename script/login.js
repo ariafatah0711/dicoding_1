@@ -64,7 +64,9 @@ function login(log = true) {
     var password = document.getElementById(`form-password`).value;
     window.username = username;
     window.password = password;
-    loadContent();
+    if (alredyLog === true && username !== "" && password !== "") {
+      loadContent();
+    }
   }
 }
 

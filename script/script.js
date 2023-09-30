@@ -31,7 +31,7 @@ function reloadPage() {
     myLoc.hash = "#home";
     Page.scrollToElement(myLoc.hash);
   } else {
-    myLoc.hash = "#home";
+    // myLoc.hash = "#home";
     Page.scrollToElement(myLoc.hash);
   }
 
@@ -49,4 +49,9 @@ for (const form of forms) {
 }
 
 // profilImage => href to #login
-profilImage.onclick = () => (location.href = "#login");
+profilImage.onclick = () => (location.href = `#login`);
+
+// dragFalse => membuat semua elemen agar tidak bisa di drag
+document.body.addEventListener(`dragstart`, function (event) {
+  event.preventDefault();
+});
