@@ -1,7 +1,7 @@
 // header
 let navbarLogin = document.getElementById(`navbar-login`);
 let profilLogin = document.getElementById(`profil-login`);
-let loginDisplay = document.getElementById(`login-display`);
+let profilImage = document.getElementById(`profil-image`);
 let btnSignUp = document.getElementById(`btn-signup`);
 
 let navbarLogOut = document.getElementById(`navbar-logout`);
@@ -19,27 +19,30 @@ const Method = {
     navbarLogin.textContent = "account";
     btnSignUp.textContent = "account";
     profilLogin.style.display = "none";
-    loginDisplay.style.display = "flex";
+    profilImage.style.display = "flex";
     navbarLogOut.classList.toggle("of");
 
     divLogin.style.display = "none";
     divUser.style.display = "flex";
 
-    let user = document.getElementById("username")
-    let pass = document.getElementById("password")
-    user.value = username
-    pass.value = password
+    let user = document.getElementById("username");
+    let pass = document.getElementById("password");
+    user.value = username;
+    pass.value = password;
     formPassword.value = password;
   },
   hide: function () {
     navbarLogin.textContent = "sign in";
     btnSignUp.textContent = "sign up";
     profilLogin.style.display = "flex";
-    loginDisplay.style.display = "none";
+    profilImage.style.display = "none";
     navbarLogOut.classList.toggle("of");
 
     divLogin.style.display = "flex";
     divUser.style.display = "none";
+  },
+  log: function () {
+    alredyLog = false;
   },
 };
 

@@ -18,7 +18,7 @@ function defaultContent() {
   xhr.onloadend = function () {
     if (this.responText !== "") {
       let data = JSON.parse(this.responseText);
-      loginDisplay.src = data.avatar_url;
+      profilImage.src = data.avatar_url;
       userImage.src = data.avatar_url;
       figUsername.textContent = data.login;
       figBio.textContent = data.bio;
@@ -28,14 +28,13 @@ function defaultContent() {
       userCompany.textContent = data.company;
       userLocation.textContent = data.location;
 
-      // formUsername.placeholder = username;
-      formUsername.placeholder = "ariafatah0711"; // value ariafatah0711
-      formPassword.placeholder = password;
-      // formUsername.value = username;
-      formUsername.value = "ariafatah0711"; // value ariafatah0711
-      formPassword.value = password;
-      // console.log(data); // berisi object data
+      formUsername.placeholder = "ariafatah0711";
+      formUsername.value = "ariafatah0711";
 
+      formPassword.placeholder = password;
+      formPassword.value = password;
+
+      // console.log(data); // berisi object data
       console.info(
         `login dengan ${username} telah gagal karena user tidak ditemukan! \notomatis login ke ariafatah0711`
       );
@@ -55,9 +54,8 @@ function loadContent() {
     if (this.status === 404) {
       defaultContent(); // username tidak ditemukan
     } else if (this.responText !== "") {
-      // mengubah data string menjadi object
-      let data = JSON.parse(this.responseText);
-      loginDisplay.src = data.avatar_url;
+      let data = JSON.parse(this.responseText); // mengubah data string menjadi object
+      profilImage.src = data.avatar_url;
       userImage.src = data.avatar_url;
       figUsername.textContent = data.login;
       figBio.textContent = data.bio;
@@ -68,20 +66,21 @@ function loadContent() {
       userLocation.textContent = data.location;
 
       formUsername.placeholder = username;
-      formPassword.placeholder = password;
       formUsername.value = username;
-      formPassword.value = password;
-      // console.log(data); // berisi object data
 
+      formPassword.placeholder = password;
+      formPassword.value = password;
+
+      // console.log(data); // berisi object data
       console.info(`login dengan ${username} telah berhasil!`);
       Method.show();
     }
   };
 
   xhr.onerror = function () {
-    // terjadi kesalahan
     alert("tidak terhubung ke internet!");
     console.warn("tidak terhubung ke internet!");
+    Method.log();
   };
 
   xhr.open("GET", url, true);

@@ -11,6 +11,7 @@
     --bgblue: #0b2149;
     --main-color: #d3ad7f;
     --txt: #1865f2;
+    --black: black;
 }
 
 * {
@@ -92,7 +93,7 @@ main {
     font-size: 2rem; font-weight: 700;
     line-height: 2.5rem; letter-spacing: 0.1rem;
     display: flex; justify-content: center; align-items: center;
-    text-transform: capitalize;
+    text-transform: capitalize; color: var(--black);
 
     /* border: var(--brd); */
 }
@@ -213,7 +214,6 @@ p {text-transform: none;}
 
 
 
-
 /* learn */
 .learn {
     height: 200vh; width: 100%;
@@ -234,6 +234,7 @@ aside {
     display: flex;
     flex-direction: column;
 }
+a:visited {color: var(--black);}
 aside h1.heading {margin-bottom: 0.5rem; background: #8295BA;}
 aside h1.heading:hover {background: var(--main-color);}
 aside h1.heading:hover span {color: #8295BA;}
@@ -298,7 +299,7 @@ aside .user-1 .content {
     gap: 1% 5%;
     height: 100%;
 }
-aside .user-1 img {height: 10rem; border-radius: 50%;}
+aside .user-1 img {height: 9rem; border-radius: 50%;}
 aside .user-1 i {margin: auto; transform: scale(0.9);}
 aside .user-1 h1 {font-size: 1.5rem; font-weight: 400; flex-grow: 1; display: flex; align-items: center;}
 aside .user-1 h2 {font-size: 1.2rem; font-weight: 400; flex-grow: 1; display: flex; align-items: center;}
@@ -311,7 +312,7 @@ footer {
     background: var(--bgblue);
 }
 footer h1 {
-    color: #8295BA; opacity: 0.9;
+    color: #8295BA !important; opacity: 0.9;
 }
 
 /* media quaries */
