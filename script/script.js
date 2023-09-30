@@ -1,17 +1,22 @@
 profilImage = document.getElementById(`profil-image`);
 const forms = document.querySelectorAll(`form`);
-const Myloc = window.location;
+const myLoc = window.location;
 
 function reloadPage() {
   // location index.html add #home
-  let about = window.location.pathname.endsWith(`/index.html#about`);
-  if (about) {
-    console.log("about");
-  } else if (window.location.pathname.endsWith(`/index.html`)) {
-    window.location.hash = `home`;
-    console.log("index.html");
-  } else {
-    console.log("normal");
+  if (myLoc.hash.endsWith(`#home`)) {
+    // location.href = "#home";
+    // myLoc.hash = "home";
+  } else if (myLoc.hash.endsWith(`#about`)) {
+    // location.href = "#about";
+  } else if (myLoc.hash.endsWith(`#learn`)) {
+    // location.href = "#learn"
+    // } else if (myLoc.hash.endsWith(`#contact`)) {
+    //   // location.href = "#contact"
+    // } else if (myLoc.hash.endsWith(`#login`)) {
+    //   // location.href = "#login"
+  } else if (myLoc.pathname.endsWith(`/index.html`)) {
+    location.href = "#home";
   }
 }
 
