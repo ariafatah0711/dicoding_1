@@ -1,14 +1,14 @@
 profilImage = document.getElementById(`profil-image`);
 const forms = document.querySelectorAll(`form`);
+const Myloc = window.location;
 
 function reloadPage() {
   // location index.html add #home
-  if (
-    window.location.pathname.endsWith(`/index.html`) ||
-    window.location.hash === `` ||
-    window.location.hash === `#`
-  ) {
-    window.Location.hash = `home`;
+  let about = window.location.pathname.endsWith(`/index.html#about`);
+  if (about) {
+    console.log("about");
+  } else if (window.location.pathname.endsWith(`/index.html`)) {
+    window.location.hash = `home`;
     console.log("index.html");
   } else {
     console.log("normal");
