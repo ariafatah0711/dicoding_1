@@ -1,6 +1,5 @@
 // let menuBtn = document.getElementById(`menu-btn`);
 let menuBtn = document.querySelector(`#menu-btn`);
-var menuButton = menuBtn;
 let navbar = document.querySelector(`.navbar`);
 let navbarA = document.querySelectorAll(`.navbar a`);
 
@@ -56,11 +55,16 @@ function showNavbar() {
   // navbar.classList.toggle(`active`);
 }
 
+// ===== mobile =====
+function cnv() {
+  let navbar = document.querySelector(`.navbar`);
+  navbar.classList.remove(`active`);
+}
+
+// ===== desktop =====
+
 // menuBtn => show navbar saat icon di click
-// menuBtn.onclick = () => navbar.classList.toggle(`active`);
-// menuBtn.addEventListener("click", function () {
-//   navbar.classList.toggle(`active`);
-// });
+menuBtn.onclick = () => navbar.classList.toggle(`active`);
 
 // scroll => saat di scroll akan meremove class active
 window.onscroll = () => navbar.classList.remove(`active`);

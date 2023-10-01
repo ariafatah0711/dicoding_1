@@ -23,7 +23,7 @@
         </div>
 
         <nav class="navbar">
-            <a href="#home">Home</a>
+            <a href="#home" onclick="">Home</a>
             <a href="#about">About</a>
             <a href="#learn">Learn</a>
             <a href="#comunity">Comunity</a>
@@ -36,20 +36,12 @@
             <img id="profil-image" src="" alt="">
         </div>
 
-        <div class="icons" onclick="document.getElementById(`menu-btn`).onclick = () => {document.querySelector(`.navbar`).classList.toggle(`active`)};">
+        <div class="icons" onclick="showNavbar();">
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
 
-        <div class="icons">
+        <div class="icons" onclick="document.querySelector(`.navbar`).classList.toggle(`active`);">
             <div class="fas fa-bars" id="menu-btn"></div>
-        </div>
-
-        <div class="icons" id="menu-btn" onclick="showNavbar();">
-            <div class="fas fa-bars"></div>
-        </div>
-
-        <div class="icons" id="menu-btn" onclick="menuButton.navbar.classList.toggle(`active`);">
-            <div class="fas fa-bars"></div>
         </div>
 
     </header>
