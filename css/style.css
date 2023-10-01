@@ -295,6 +295,7 @@ p {text-transform: none;}
 .learn article {
     display: flex; flex-direction: column; gap: 2rem; position: relative; padding: 1.5rem 0;
 }
+
 .learn article .box {
     position: relative; background: #fff; width: 22.5rem; height: 7.5rem; margin: 0 auto;
     display: flex; justify-items: center; 
@@ -324,7 +325,7 @@ p {text-transform: none;}
 .learn article .box:hover .content div h3 {color: #fff;}
 .learn article .box:hover .content div p {color: #fff;}
 
-/* .learn article:nth-child(2)~article {border: var(--brd);} */
+/* learn article */
 .learn article:nth-child(2)~article h1.heading {color: var(--clr); position: relative;}
 .learn article:nth-child(2)~article h1.heading div {position: relative; transition: 0.5s ease-in-out;}
 .learn article:nth-child(2)~article i {padding: 0 1rem;}
@@ -338,10 +339,10 @@ p {text-transform: none;}
 .learn article:nth-child(2)~article h1.heading:hover {color: #fff;}
 .learn article:nth-child(2)~article h1.heading:hover span {color: #fff;}
 
-
 .learn article:nth-child(2)~article h1.heading.active::before {width: 100%;}
 .learn article:nth-child(2)~article h1.heading.active {color: #fff !important;}
 .learn article:nth-child(2)~article h1.heading.active span {color: #fff;}
+
 
 
 
