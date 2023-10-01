@@ -21,7 +21,7 @@ const Page = {
 };
 
 function reloadPage() {
-  return;
+  // return;
   // scroll to #home => biar rapi aja sih
   if (
     myLoc.hash.endsWith(`#about`) ||

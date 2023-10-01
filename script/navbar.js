@@ -50,7 +50,10 @@ for (const a of aIndex6) {
 }
 
 function showNavbar() {
-  navbar.classList.toggle(`active`);
+  document.getElementById(`menu-btn`).onclick = () => {
+    document.querySelector(`.navbar`).classList.toggle(`active`);
+  };
+  // navbar.classList.toggle(`active`);
 }
 
 // menuBtn => show navbar saat icon di click
