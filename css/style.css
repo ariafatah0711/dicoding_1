@@ -236,7 +236,10 @@ p {text-transform: none;}
 .about .container-2 {
     display: flex; flex-direction: column;
 }
-.about .container-2 h1 {display: flex; height: auto; font-size: 2.35rem; font-weight: 400; padding: 1.5rem 3rem; opacity: 0.95;}
+.about .container-2 h1 {
+    display: flex; height: auto; font-size: 2.35rem; font-weight: 400;
+    padding: 1.5rem 3rem; opacity: 0.95; text-transform: none;
+}
 .about .container-2 .content {
     display: flex; height: 20rem; font-size: 120%; display: flex;  flex-direction: row;
     width: 100% !important; padding: 0 0 !important;
@@ -256,12 +259,46 @@ p {text-transform: none;}
     padding: 2rem 0;
 }
 
-/* contact */
-.contact {
+/* comunity */
+.comunity {
     height: calc(100vh - 5rem- 5rem); width: 60%;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 3rem 0; flex-direction: column;
 }
-.contact h1 {margin-bottom: 0.5rem;}
+.comunity h1.heading {margin-bottom: 0.5rem; background: #8295BA; width: 98%;}
+.comunity h1.heading:hover {background: var(--main-color);}
+.comunity h1.heading:hover span {color: #8295BA;}
+.comunity h1 {margin-bottom: 0.5rem;}
+.comunity .chanel {
+    flex-grow: 1; height: 50vh; overflow-y: scroll; overflow-x: hidden;
+}
+.comunity .chanel .search {position: absolute; background: #eeefff; width: 50%;}
+.comunity .chanel div {display: flex; flex-direction: row;}
+.comunity .chanel ul li {list-style: none;}
+
+.comunity .chanel #search {width: 100%; margin: 1rem;}
+.comunity .chanel label, .comunity .chanel i {display: flex; align-items: center; cursor: pointer; padding-right: 1rem;}
+
+.comunity .chanel #names {flex-grow: 1; margin-top: 5rem;}
+
+.comunity .chanel #names .chat li {display: flex; flex-direction: row; background: #fff; margin: 0.5rem 1rem; padding-right: 1rem;}
+.comunity .chanel #names div {display: flex; flex-direction: column;}
+.comunity .chanel #names div a {color: var(--txt); font-size: 1.35rem; display: flex; height: 2rem;}
+
+.comunity .chanel #names img {height: 5rem; width: 5rem; padding: 0.5rem; border-radius: 50%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* aside */
 aside {
@@ -391,8 +428,10 @@ footer h1 {color: #8295BA !important; opacity: 0.9;}
     .about .container-2 h1 {font-size: 2rem;}
     .about .container-2 .content {font-size: 120%;}
 
-    /* contact */
-    .contact {height: calc(100vh - 30rem); width: 100%;}
+    /* comunity */
+    .comunity {height: calc(100vh - 5rem); width: 100%;}
+    .comunity h1.heading {width: 100%;}
+    .comunity .chanel .search {width: 80%;}
 
     /* aside */
     aside {height: calc(70vh - 5rem); width: 100%;}

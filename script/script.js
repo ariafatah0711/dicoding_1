@@ -21,18 +21,21 @@ const Page = {
 };
 
 function reloadPage() {
+  // return;
   // scroll to #home => biar rapi aja sih
-  if (myLoc.hash.endsWith(`#about`) || myLoc.hash.endsWith(`#learn`)) {
-    // no scroll
+  if (
+    myLoc.hash.endsWith(`#about`) ||
+    myLoc.hash.endsWith(`#learn`) ||
+    myLoc.hash.endsWith(`#comunity`)
+  ) {
     Page.scrollToElement(myLoc.hash);
   } else if (myLoc.hash.endsWith(`#home`)) {
     Page.scrollToElement(myLoc.hash);
   } else if (myLoc.pathname.endsWith(`/index.html`)) {
     myLoc.hash = "#home";
-    Page.scrollToElement(myLoc.hash);
   } else {
-    // myLoc.hash = "#home";
-    Page.scrollToElement(myLoc.hash);
+    myLoc.hash = "#home";
+    // Page.scrollToElement(myLoc.hash);
   }
 
   // reset input

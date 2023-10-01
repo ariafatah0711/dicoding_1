@@ -31,7 +31,7 @@ for (const a of navbarA) {
       a.classList.add(`active`);
     } else if (a.getAttribute(`href`) === "#learn") {
       a.classList.add(`active`);
-    } else if (a.getAttribute(`href`) === "#contact") {
+    } else if (a.getAttribute(`href`) === "#comunity") {
       a.classList.add(`active`);
     } else if (a.getAttribute(`href`) === "#contact") {
       a.classList.add(`active`);

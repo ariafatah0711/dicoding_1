@@ -11,6 +11,8 @@ let userLocation = document.getElementById(`user-location`);
 let formUsername = document.getElementById(`form-username`);
 let formPassword = document.getElementById(`form-password`);
 
+var dataUser;
+
 // ===== API GITHUB =====
 // defaultContent => kalo username nya tidak ditemukan akan otomatis ke github ariafatah0711
 function defaultContent() {
@@ -19,6 +21,7 @@ function defaultContent() {
   xhr.onloadend = function () {
     if (this.responText !== "") {
       let data = JSON.parse(this.responseText);
+      dataUser = data;
       profilImage.src = data.avatar_url;
       userImage.src = data.avatar_url;
       figUsername.textContent = data.login;
@@ -54,8 +57,10 @@ function loadContent() {
   xhr.onloadend = function () {
     if (this.status === 404) {
       defaultContent(); // username tidak ditemukan
+      username = "ariafatah0711";
     } else if (this.responText !== "") {
       let data = JSON.parse(this.responseText); // mengubah data string menjadi object
+      dataUser = data;
       profilImage.src = data.avatar_url;
       userImage.src = data.avatar_url;
       figUsername.textContent = data.login;
