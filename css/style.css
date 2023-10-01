@@ -64,6 +64,12 @@ header {
 }
 
 /* navbar */
+header .logo-content img {height: 4rem; width: 4rem; display: flex;}
+header .logo-content h1 {
+    margin-left: 0.75rem; font-size: 2rem; 
+    font-weight: 400; opacity: 0.75;
+    font-family: Impact;
+}
 header .navbar {
     display: flex; gap: 1rem;
 }
@@ -106,7 +112,6 @@ main {
     height: auto; width: 100%;
     display: flex;
 
-    /* border-left: var(--brd); */
     border-bottom: var(--brd); border-color: green;
 }
 .heading {
@@ -180,7 +185,7 @@ p {text-transform: none;}
     margin: 2rem 0 5rem;
     display: flex;
 
-    border: none; 
+    border: none;
 }
 
 /* about container-1 */
@@ -228,7 +233,22 @@ p {text-transform: none;}
 }
 .about .container:nth-child(2)~.container .content div {flex-grow: 1; padding-top: 0.5rem;}
 
-
+.about .container-2 {
+    display: flex; flex-direction: column;
+}
+.about .container-2 h1 {display: flex; height: auto; font-size: 2.35rem; font-weight: 400; padding: 1.5rem 3rem; opacity: 0.95;}
+.about .container-2 .content {
+    display: flex; height: 20rem; font-size: 120%; display: flex;  flex-direction: row;
+    width: 100% !important; padding: 0 0 !important;
+    flex-grow: 0 !important; flex-direction: row !important;
+}
+.about .container-2 .content div {width: auto; display: flex; flex-direction: column;}
+.about .container-2 .content div h1 {
+    justify-content: flex-end; opacity: 0.95;  padding: 0; align-items: flex-end; letter-spacing: 0.15rem;
+    font-family: 'Poppins' !important; font-size: 2rem !important; font-size: 1.75em !important;
+}
+.about .container-2 .content div h2 {justify-content: flex-end; flex-grow: 1; opacity: 0.8; font-size: 1.2em;}
+.about .container-2 .content img {height: 100% !important; width: 8em !important; padding-left: 0.5rem;}
 
 /* learn */
 .learn {
@@ -284,7 +304,6 @@ aside button {
 /* login */
 aside .login{
     display: flex; flex-direction: column;
-    /* background: var(--main-color); */
 }
 
 /* profill */
@@ -299,8 +318,7 @@ aside .user-1 {
     display: flex; overflow: hidden;
 }
 aside .user-1 .content {
-    display: grid; grid-template-columns: auto 100%;
-    gap: 1% 5%;
+    display: grid; grid-template-columns: auto 100%; gap: 1% 5%;
     height: 100%;
 }
 aside .user-1 img {height: 9rem; border-radius: 50%;}
@@ -315,9 +333,7 @@ footer {
     display: flex;
     background: var(--bgblue);
 }
-footer h1 {
-    color: #8295BA !important; opacity: 0.9;
-}
+footer h1 {color: #8295BA !important; opacity: 0.9;}
 
 /* media quaries */
 /* ==================== media quaries ==================== */
@@ -325,11 +341,11 @@ footer h1 {
     html {font-size: 70%;}
 
     /* main */
-    .home img {
-        height: 30rem;
-    }
+    .home img {height: 30rem;}
     .about .container:nth-child(2)~.container img {width: 45%;}
     .about .container:nth-child(2)~.container .content {width: 55%;}
+    .about .container-2 h1 {font-size: 2.1rem;}
+    .about .container-2 .content {font-size: 100%;}
     aside .user-1 img {height: 7rem;}
 }
 
@@ -342,20 +358,14 @@ footer h1 {
         height: calc(100vh - 5rem); width: 30rem;
         display: flex; flex-wrap: wrap;
         align-items: flex-start; align-content: flex-start;
-        transition: all 0.2s linear;
-        background: #efefef;
+        transition: all 0.2s linear; background: #efefef;
     }
     header .navbar a {
-        color: var(--txt);
-        display: block;
-        margin: 0.5rem;
-        padding: 0.5rem;
-        font-size: 2rem;
-        width: 100%;
+        width: 100%; color: var(--txt);
+        margin: 0.5rem; padding: 0.5rem;
+        display: block; font-size: 2rem;
     }
-    header .active {
-        right: 0;
-    }
+    header .active {right: 0;}
 
     /* ===== main ===== */
     /* home */
@@ -366,49 +376,44 @@ footer h1 {
 
     /* about */
     .about {padding: 1rem;}
-    .about .container:nth-child(2) {
-        height: calc(100vh - 15rem); padding-bottom: 0rem;
-        display: flex; flex-direction: column;
-    }
-    .about .container:nth-child(2) .content {
-        padding: 5% 0;
-        height: calc(100% / 3);
-    }
+    .about .container:nth-child(2) {height: calc(100vh - 15rem); padding-bottom: 0rem;display: flex; flex-direction: column;}
+    .about .container:nth-child(2) .content {padding: 5% 0; height: calc(100% / 3);}
     .about .container:nth-child(2) .content img {height: 7rem; padding: 0;}
     .about .container:nth-child(2) .content p {flex-grow: 1;}
 
     .about .container:nth-child(2)~.container {flex-direction: column;}
+    .about .container:nth-child(4) {flex-direction: column-reverse !important;}
     .about .container:nth-child(2)~.container img {width: 100%; height: 50%;}
     .about .container:nth-child(2)~.container .content {width: 100%; flex-grow: 1;}
     .about .container:nth-child(2)~.container .content h1 {font-size: 2.8rem;}
     .about .container:nth-child(2)~.container .content p {font-size: 1.2rem;}
 
+    .about .container-2 h1 {font-size: 2rem;}
+    .about .container-2 .content {font-size: 120%;}
+
     /* contact */
-    .contact {
-        height: calc(100vh - 30rem); width: 100%;
-    }
+    .contact {height: calc(100vh - 30rem); width: 100%;}
+
     /* aside */
-    aside {
-        height: calc(70vh - 5rem); width: 100%;
-    }
+    aside {height: calc(70vh - 5rem); width: 100%;}
     aside form {padding-right: 35%;}
     aside .user-1 img {height: 8rem;}
 }
 
 @media (max-width:450px) {
     html {font-size: 50%;}
+    .about .container-2 h1 {font-size: 2.3rem;}
 }
 
 @media (max-width:350px) {
     /* html {visibility: hidden;} */
     html {font-size: 40%;}
+    .about .container-2 h1 {font-size: 2.4rem;}
 }
 
 /* ###### */
 /* img {height: 5rem !important;} */
 img {height: 100%;}
 /* div, .navbar {border: var(--brd);} */
-/* 
-.about .container:nth-child(2)~.container {
-    border: var(--brd);
-} */
+
+/* .about .container:nth-child(2)~.container {border: var(--brd);} */
