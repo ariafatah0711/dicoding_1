@@ -18,7 +18,9 @@
     <header>
 
         <div class="logo-content">
-            <img src="./asset/icon/logo-min.png" alt="" loading="lazy">
+            <a href="#home">
+                <img src="./asset/icon/logo-min.png" alt="" loading="lazy">
+            </a>
             <h1>Web Academy</h1>
         </div>
 
@@ -36,10 +38,7 @@
             <img id="profil-image" src="" alt="">
         </div>
 
-        <div class="icons" onclick="showNavbar();">
-            <div class="fas fa-bars" id="menu-btn"></div>
-        </div>
-
+        <!-- tadi nyoba pake di js malah ngebug pas di hp ga bisa di click -->
         <div class="icons" onclick="document.querySelector(`.navbar`).classList.toggle(`active`);">
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
@@ -249,11 +248,11 @@
     <!-- footer start -->
 
     <!-- script -->
-    <script src="./script/navbar.js/"></script>
-    <script src="./script/script.js"></script>
-    <script src="./script/login.js"></script>
-    <script src="./script/user.js"></script>
-    <script src="./script/comunity.js"></script>
+    <script src="script/navbar.js/"></script>
+    <script src="script/script.js"></script>
+    <script src="script/login.js"></script>
+    <script src="script/user.js"></script>
+    <script src="script/comunity.js"></script>
 
 </body>
 </html>
