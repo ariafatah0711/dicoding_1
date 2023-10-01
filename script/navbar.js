@@ -51,14 +51,13 @@ for (const a of aIndex6) {
 // btnMenu.onclick = () => navbar.classList.toggle(`active`);
 btnMenu.addEventListener("click", function () {
   navbar.classList.toggle(`active`);
-  console.log("p");
 });
 
 // scroll => saat di scroll akan meremove class active
 window.onscroll = () => navbar.classList.remove(`active`);
 
 // click => saat di click akan meremove navbar
-// for (const a of aAll) {
-//   if (a.id === "navbar-logout") continue;
-//   a.onclick = () => navbar.classList.remove(`active`);
-// }
+for (const a of aAll) {
+  if (a.id === "navbar-logout") continue;
+  a.onclick = () => navbar.classList.remove(`active`);
+}
