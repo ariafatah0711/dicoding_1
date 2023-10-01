@@ -459,3 +459,6 @@ img {height: 100%;}
 /* div, .navbar {border: var(--brd);} */
 
 /* .about .container:nth-child(2)~.container {border: var(--brd);} */
+#menu-btn {
+    border: var(--brd);
+}

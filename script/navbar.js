@@ -1,8 +1,8 @@
 let btnMenu = document.getElementById(`menu-btn`);
+console.log(btnMenu);
 let navbar = document.querySelector(`.navbar`);
 let navbarA = document.querySelectorAll(`.navbar a`);
 
-// let a6_9 = [aAll[6], aAll[7], aAll[8], aAll[9], aAll[10], aAll[11]]; // elemen indeks ke 6 ~
 let aAll = document.querySelectorAll(`a`);
 let aIndex6 = [];
 for (let i = 5; i < aAll.length; i++) {
@@ -51,6 +51,7 @@ for (const a of aIndex6) {
 // btnMenu.onclick = () => navbar.classList.toggle(`active`);
 btnMenu.addEventListener("click", function () {
   navbar.classList.toggle(`active`);
+  console.log("p");
 });
 
 // scroll => saat di scroll akan meremove class active
