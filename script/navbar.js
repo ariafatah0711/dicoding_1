@@ -48,7 +48,10 @@ for (const a of aIndex6) {
 }
 
 // btnMenu => show navbar saat icon di click
-btnMenu.onclick = () => navbar.classList.toggle(`active`);
+// btnMenu.onclick = () => navbar.classList.toggle(`active`);
+btnMenu.addEventListener("click", function () {
+  navbar.classList.toggle(`active`);
+});
 
 // scroll => saat di scroll akan meremove class active
 window.onscroll = () => navbar.classList.remove(`active`);

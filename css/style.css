@@ -405,7 +405,7 @@ footer h1 {color: #8295BA !important; opacity: 0.9;}
         margin: 0.5rem; padding: 0.5rem;
         display: block; font-size: 2rem;
     }
-    header .active {right: 0;}
+    header .navbar.active {right: 0;}
 
     /* ===== main ===== */
     /* home */
