@@ -21,7 +21,6 @@ function search() {
 function addChat() {
   if (alredyLog === true) {
     teksPesan = prompt(`pesan: `);
-    console.log(teksPesan);
     if (teksPesan !== false && teksPesan !== "" && teksPesan !== null) {
       let chat = document.getElementById(`names`);
       let addedChat = document.createElement(`div`);

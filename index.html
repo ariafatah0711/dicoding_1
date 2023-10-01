@@ -25,7 +25,7 @@
         </div>
 
         <nav class="navbar">
-            <a href="#home" onclick="cnv()">Home</a>
+            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#learn">Learn</a>
             <a href="#comunity">Comunity</a>
@@ -38,7 +38,6 @@
             <img id="profil-image" src="" alt="">
         </div>
 
-        <!-- tadi nyoba pake di js malah ngebug pas di hp ga bisa di click -->
         <div class="icons" onclick="document.querySelector(`.navbar`).classList.toggle(`active`);">
             <div class="fas fa-bars" id="menu-btn"></div>
         </div>
@@ -51,7 +50,6 @@
 
         <section id="home" class="container home">
             <div class="image">
-                <!-- <img src="./asset/image/poto_profil.png" alt=""> -->
                 <img src="https://camo.githubusercontent.com/33638daa57fac6d848ecc4ffcd2ed24ac47b505d196f62f7772e969087a0da4e/68747470733a2f2f7374617469632e636f6c6c65637475692e636f6d2f73686f74732f333834383931342f70726f6772616d6d65722d74686f6d61732d6c61726765" alt="">
             </div>
             <div class="content">
@@ -149,6 +147,42 @@
 
         <section id="learn" class="container learn">
             <h1 class="heading">learn <span>get started</span></h1>
+            <article>
+
+                <a href="#home" class="box" style="--clr:#fc5f9b;">
+                    <div class="content">
+                        <i class="fa-solid fa-code fa-2x"></i>
+                        <div>
+                            <h3>Website Developer</h3>
+                            <p>12 Project</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="box" style="--clr:#a362ea;">
+                    <div class="content">
+                        <i class="fa-brands fa-react fa-2x"></i>
+                        <div>
+                            <h3>FrameWork Library</h3>
+                            <p>18 Project</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box" style="--clr:#0ed095;">
+                    <div class="content">
+                        <i class="fa-solid fa-user-secret fa-2x"></i>
+                        <div>
+                            <h3>Cyber Security</h3>
+                            <p>7 Project</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+
+            </article>
         </section>
 
         <section id="comunity" class="container comunity">
@@ -248,7 +282,7 @@
     <!-- footer start -->
 
     <!-- script -->
-    <script src="script/navbar.js/"></script>
+    <script src="script/navbar.js/" defer></script>
     <script src="script/script.js"></script>
     <script src="script/login.js"></script>
     <script src="script/user.js"></script>

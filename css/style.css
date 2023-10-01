@@ -12,6 +12,10 @@
     --main-color: #d3ad7f;
     --txt: #1865f2;
     --black: black;
+
+    --col1: #a362ea;
+    --col2: #0ed095;
+    --col3: #fc5f9b;
 }
 
 * {
@@ -108,11 +112,10 @@ main {
     padding-bottom: 0;
     display: flex; flex-wrap: wrap;
 }
+/* main {padding: 5rem 0;} section, aside {padding: 0 7%;} */
 .container {
     height: auto; width: 100%;
     display: flex;
-
-    border-bottom: var(--brd); border-color: green;
 }
 .heading {
     height: 5rem; width: 100%;
@@ -120,8 +123,6 @@ main {
     line-height: 2.5rem; letter-spacing: 0.1rem;
     display: flex; justify-content: center; align-items: center;
     text-transform: capitalize; color: var(--black);
-
-    /* border: var(--brd); */
 }
 .heading span {
     margin-left: 1rem;
@@ -289,7 +290,39 @@ p {text-transform: none;}
 
 .comunity .chanel #names img {height: 5rem; width: 5rem; padding: 0.5rem; border-radius: 50%;}
 
+/* learn */
+.learn {flex-direction: column; padding: 0 10%; height: auto;}
+.learn article {
+    display: flex; flex-direction: column; gap: 2rem; position: relative; padding: 1.5rem 0;
+}
+.learn article .box {
+    position: relative; background: #fff; width: 22.5rem; height: 7.5rem; margin: 0 auto;
+    display: flex; justify-items: center; 
+    cursor: pointer; box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.025); transition: 0.5s ease-in-out;
+}
+.learn article .box:nth-child(1) {transform: translateX(-70px);}
+.learn article .box:nth-child(3) {transform: translateX(70px);}
+.learn article:hover .box:nth-child(1) {transform: translateX(0);}
+.learn article:hover .box:nth-child(3) {transform: translateX(0);}
 
+.learn article .box::before {
+    content: "";
+    position: absolute; width: 0.35rem; height: 100%;
+    background: var(--clr); transition: 0.5s ease-in-out;
+}
+.learn article .box:hover::before {
+    width: 100%;
+}
+.learn article .box .content {position: relative; display: flex; align-items: center; height: 100%;}
+.learn article .box .content i {
+    position: relative; min-width: 5rem; display: flex; transition: 0.3s ease-in-out;
+    justify-content: center; align-items: center; color: var(--clr);
+}
+.learn article .box:hover .content i {color: #fff;}
+.learn article .box .content div h3 {font-weight: 500; color: var(--clr); transition: 0.4s ease-in-out}
+.learn article .box .content div p {font-size: 0.9em; color: #999; transition: 0.3s ease-in-out}
+.learn article .box:hover .content div h3 {color: #fff;}
+.learn article .box:hover .content div p {color: #fff;}
 
 
 
