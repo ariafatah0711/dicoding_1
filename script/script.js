@@ -29,13 +29,19 @@ function reloadPage() {
     myLoc.hash.endsWith(`#comunity`)
   ) {
     Page.scrollToElement(myLoc.hash);
+  } else if (
+    myLoc.hash.endsWith(`#learn_1`) ||
+    myLoc.hash.endsWith(`#learn_2`) ||
+    myLoc.hash.endsWith(`#learn_3`)
+  ) {
+    Page.scrollToElement("#learn");
   } else if (myLoc.hash.endsWith(`#home`)) {
-    Page.scrollToElement(myLoc.hash);
+    Page.scrollToElement("#home");
   } else if (myLoc.pathname.endsWith(`/index.html`)) {
-    myLoc.hash = "#home";
+    Page.scrollToElement("#home");
   } else {
-    myLoc.hash = "#home";
-    // Page.scrollToElement(myLoc.hash);
+    // myLoc.hash = "#home";
+    Page.scrollToElement("#home");
   }
 
   // reset input

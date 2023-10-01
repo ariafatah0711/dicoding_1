@@ -66,3 +66,40 @@ for (const a of aAll) {
   if (a.id === "navbar-logout") continue;
   a.onclick = () => navbar.classList.remove(`active`);
 }
+
+let learnItem = document.querySelectorAll(`article a`);
+// learnItem = document.querySelectorAll(`a`);
+for (let i of learnItem) {
+  i.addEventListener(`mouseover`, function () {
+    let learn_1 = document.querySelector(`#learn_1 h1`);
+    let learn_2 = document.querySelector(`#learn_2 h1`);
+    let learn_3 = document.querySelector(`#learn_3 h1`);
+    learn_1.classList.remove(`active`);
+    learn_2.classList.remove(`active`);
+    learn_3.classList.remove(`active`);
+  });
+}
+for (let i of aAll) {
+  i.addEventListener(`mouseleave`, function () {
+    let learn_1 = document.querySelector(`#learn_1 h1`);
+    let learn_2 = document.querySelector(`#learn_2 h1`);
+    let learn_3 = document.querySelector(`#learn_3 h1`);
+    if (myLoc.hash.endsWith(`#learn_1`)) {
+      learn_1.classList.add(`active`);
+      learn_2.classList.remove(`active`);
+      learn_3.classList.remove(`active`);
+    } else if (myLoc.hash.endsWith(`#learn_2`)) {
+      learn_2.classList.add(`active`);
+      learn_3.classList.remove(`active`);
+      learn_1.classList.remove(`active`);
+    } else if (myLoc.hash.endsWith(`#learn_3`)) {
+      learn_3.classList.add(`active`);
+      learn_1.classList.remove(`active`);
+      learn_2.classList.remove(`active`);
+    } else {
+      learn_1.classList.remove(`active`);
+      learn_2.classList.remove(`active`);
+      learn_3.classList.remove(`active`);
+    }
+  });
+}

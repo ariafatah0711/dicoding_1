@@ -13,9 +13,9 @@
     --txt: #1865f2;
     --black: black;
 
-    --col1: #a362ea;
-    --col2: #0ed095;
-    --col3: #fc5f9b;
+    --col1: #fc5f9b;
+    --col2: #a362ea;
+    --col3: #0ed095;
 }
 
 * {
@@ -324,11 +324,24 @@ p {text-transform: none;}
 .learn article .box:hover .content div h3 {color: #fff;}
 .learn article .box:hover .content div p {color: #fff;}
 
+/* .learn article:nth-child(2)~article {border: var(--brd);} */
+.learn article:nth-child(2)~article h1.heading {color: var(--clr); position: relative;}
+.learn article:nth-child(2)~article h1.heading div {position: relative; transition: 0.5s ease-in-out;}
+.learn article:nth-child(2)~article i {padding: 0 1rem;}
+.learn article:nth-child(2)~article h1.heading span {color: var(--clr); transition: 0.5s ease-in-out;}
+.learn article:nth-child(2)~article h1.heading::before {
+    content: "";
+    position: absolute; width: 0.35rem; height: inherit; left: 0;
+    background: var(--clr); transition: 0.3s ease-in-out;
+}
+.learn article:nth-child(2)~article h1.heading:hover::before {width: 100%;}
+.learn article:nth-child(2)~article h1.heading:hover {color: #fff;}
+.learn article:nth-child(2)~article h1.heading:hover span {color: #fff;}
 
 
-
-
-
+.learn article:nth-child(2)~article h1.heading.active::before {width: 100%;}
+.learn article:nth-child(2)~article h1.heading.active {color: #fff !important;}
+.learn article:nth-child(2)~article h1.heading.active span {color: #fff;}
 
 
 
