@@ -216,22 +216,22 @@ p {text-transform: none;}
 }
 .about .container:nth-child(2)~.container img {height: auto; width: 55%; object-fit: contain;}
 .about .container:nth-child(2)~.container .content {
-    display: flex; flex-grow: 1; width: 45%;
-    flex-direction: column; padding: 0 3rem;
+    display: flex; width: 45%;
+    flex-direction: column; padding: 0 3rem; justify-items: center; justify-content: center;
 }
 .about .container:nth-child(2)~.container .content h2 {
-    display: flex; height: 15%; 
-    opacity: 0.4; padding-top: 0.5rem;
+    display: flex; height: auto; 
+    opacity: 0.4; padding: 0.5rem 0 2rem 0;
 }
 .about .container:nth-child(2)~.container .content h1 {
-    display: flex; height: 40%; font-size: 3.2rem;
-    opacity: 0.9; font-weight: 400; font-family: Tahoma;
+    display: flex; height: auto; font-size: 3.2rem;
+    opacity: 0.9; font-weight: 400; font-family: Tahoma; padding-bottom: 2rem;
 }
 .about .container:nth-child(2)~.container .content p {
-    display: flex; height: 20%; font-size: 1.35rem;
-    opacity: 0.85; font-weight: 500;
+    display: flex; height: auto; font-size: 1.35rem;
+    opacity: 0.85; font-weight: 500; padding-bottom: 1rem;
 }
-.about .container:nth-child(2)~.container .content div {flex-grow: 1; padding-top: 0.5rem;}
+.about .container:nth-child(2)~.container .content div {padding-top: 0.5rem;}
 
 .about .container-2 {
     display: flex; flex-direction: column;
@@ -243,14 +243,17 @@ p {text-transform: none;}
 .about .container-2 .content {
     display: flex; height: 20rem; font-size: 120%; display: flex;  flex-direction: row;
     width: 100% !important; padding: 0 0 !important;
-    flex-grow: 0 !important; flex-direction: row !important;
+    flex-grow: 0 !important; flex-direction: row !important; justify-content: right !important; align-items: center;
 }
 .about .container-2 .content div {width: auto; display: flex; flex-direction: column;}
 .about .container-2 .content div h1 {
-    justify-content: flex-end; opacity: 0.95;  padding: 0; align-items: flex-end; letter-spacing: 0.15rem;
+    justify-content: flex-end; opacity: 0.95;  padding: 0;
+    align-items: flex-end; letter-spacing: 0.15rem;
     font-family: 'Poppins' !important; font-size: 2rem !important; font-size: 1.75em !important;
 }
-.about .container-2 .content div h2 {justify-content: flex-end; flex-grow: 1; opacity: 0.8; font-size: 1.2em;}
+.about .container-2 .content div h2 {
+    justify-content: flex-end; opacity: 0.8; font-size: 1.2em;
+}
 .about .container-2 .content img {height: 100% !important; width: 8em !important; padding-left: 0.5rem;}
 
 /* learn */
