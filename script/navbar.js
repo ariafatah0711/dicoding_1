@@ -54,7 +54,7 @@ btnMenu.onclick = () => navbar.classList.toggle(`active`);
 window.onscroll = () => navbar.classList.remove(`active`);
 
 // click => saat di click akan meremove navbar
-for (const a of aAll) {
-  if (a.id === "navbar-logout") continue;
-  a.onclick = () => navbar.classList.remove(`active`);
-}
+// for (const a of aAll) {
+//   if (a.id === "navbar-logout") continue;
+//   a.onclick = () => navbar.classList.remove(`active`);
+// }
