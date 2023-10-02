@@ -44,6 +44,7 @@ function addChat() {
   }
 }
 
+// ===== foundChat == username =====
 function foundChat() {
   let chat = document.querySelectorAll(`#names .chat div a`);
   let icon = document.querySelectorAll(`#names .chat i`);
@@ -59,6 +60,7 @@ function foundChat() {
 }
 foundChat();
 
+// ===== deleteChat =====
 function deleteChat() {
   let chat = document.querySelectorAll(`#names .chat`);
   let icon = document.querySelectorAll(`#names .chat i`);

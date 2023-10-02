@@ -453,12 +453,27 @@ aside .user-1 h2 {font-size: 1.2rem; font-weight: 400; flex-grow: 1; display: fl
 
 /* =============== footer =============== */
 footer {
-    height: 5rem; width: 100%;
-    height: 30vh;
-    display: flex;
+    width: 100%; height: 30vh;
+    display: flex; flex-direction: column;
     background: var(--bgblue);
 }
-footer h1 {color: #8295BA !important; opacity: 0.9;}
+footer h1 {color: #8295BA !important; opacity: 0.9; font-size: 1.4rem;}
+footer .content {
+    display: grid;
+    grid-template-columns: repeat(4, 20%); padding: 0 2%;
+    flex-grow: 1; justify-content: space-around;
+}
+footer .content .box {
+    display: flex;
+    flex-direction: column; 
+}
+footer .content .box a {
+    color: #fff !important; opacity: 0.8; font-size: 1.3rem; transition: 0.2s ease-in;
+}
+footer .content .box a:hover {
+    color: var(--main-color) !important; opacity: 1;
+}
+
 
 /* media quaries */
 /* ==================== media quaries ==================== */
@@ -525,11 +540,16 @@ footer h1 {color: #8295BA !important; opacity: 0.9;}
     aside {height: calc(70vh - 5rem); width: 100%;}
     aside form {padding-right: 35%;}
     aside .user-1 img {height: 8rem;}
+ 
 }
 
 @media (max-width:450px) {
     html {font-size: 50%;}
     .about .container-2 h1 {font-size: 2.3rem;}
+    footer .content {
+        grid-template-columns: repeat(2, 40%); padding: 0 2%;
+        grid-template-rows: repeat(2, 40%); row-gap: 5%;
+    }
 }
 
 @media (max-width:350px) {

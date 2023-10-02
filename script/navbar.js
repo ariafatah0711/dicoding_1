@@ -1,5 +1,3 @@
-// let menuBtn = document.getElementById(`menu-btn`);
-// let menuBtn = document.querySelector(`#menu-btn`);
 let navbar = document.querySelector(`.navbar`);
 let navbarA = document.querySelectorAll(`.navbar a`);
 
@@ -47,17 +45,6 @@ for (const a of aIndex6) {
   });
 }
 
-// ===== mobile =====
-function cnv() {
-  let navbar = document.querySelector(`.navbar`);
-  navbar.classList.remove(`active`);
-}
-
-// ===== desktop =====
-
-// menuBtn => show navbar saat icon di click
-// menuBtn.onclick = () => navbar.classList.toggle(`active`);
-
 // scroll => saat di scroll akan meremove class active
 window.onscroll = () => navbar.classList.remove(`active`);
 
@@ -67,8 +54,9 @@ for (const a of aAll) {
   a.onclick = () => navbar.classList.remove(`active`);
 }
 
+// ===== learn =====
+// saat learn a dihover akan menghapus semua effect dan meanmpilkan effect yang sedang di hover
 let learnItem = document.querySelectorAll(`article a`);
-// learnItem = document.querySelectorAll(`a`);
 for (let i of learnItem) {
   i.addEventListener(`mouseover`, function () {
     let learn_1 = document.querySelector(`#learn_1 h1`);
@@ -79,7 +67,7 @@ for (let i of learnItem) {
     learn_3.classList.remove(`active`);
   });
 }
-
+// menambahkan class di learn saat di click
 for (let i of aAll) {
   i.addEventListener(`mouseleave`, function () {
     let learn_1 = document.querySelector(`#learn_1 h1`);
