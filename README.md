@@ -7,6 +7,11 @@ ini adalah web yang berisi tutorial web developer
 - untuk penggunaan javascript aku hanya menggunakan javascript yang aku pahami dan pelajari, namun semua itu masih ada campur tangan dari youtube, dan tambahan chat gpt.
 - aku mengerjakan web ini selama kurang lebih 7 hari
 
+### tampilan menggunakan javascript dan tampilan
+- memilki effect scroll smooth, dan layout yang rapi dan responsive
+- memilki effect hover yang smoth di tambah penggunaan javascript
+- dan banyak lainya.
+
 ### yang dapat di lakukan web ini
 - aku membuat sebuah system login dengan mengambil API github yang sesuai dengan username.
 - selain itu aku menambahkan tampilan profil, dan fitur ganti user di profil, dan fitur log out.
