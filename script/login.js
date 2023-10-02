@@ -49,6 +49,7 @@ const Method = {
     for (let i = 0; i < icon.length; i++) {
       icon[i].classList.remove(`fa-trash`);
     }
+    deleteChat();
   },
 };
 

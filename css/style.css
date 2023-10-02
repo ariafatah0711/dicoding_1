@@ -17,7 +17,6 @@
     --col2: #a362ea;
     --col3: #0ed095;
 }
-
 * {
     font-family: 'Poppins', Tahoma ,sans-serif;
     margin: 0; padding: 0;
@@ -26,9 +25,7 @@
     text-decoration: none;
     text-transform: capitalize;
     user-select: none;
-    /* transition: all 0.2s linear; */
 }
-
 html {
     font-size: 75%;
     overflow-x: hidden;
@@ -52,6 +49,10 @@ button:hover::after {
     padding: 0.1rem;
     position: absolute;
     border: 0.2rem solid var(--txt); border-radius: 0.5rem;
+}
+/* select text */
+*:not(input)::selection {
+    background: transparent; color: inherit;
 }
 
 /* =============== header =============== */
@@ -176,7 +177,7 @@ p {text-transform: none;}
     flex-wrap: wrap;
 }
 
-/* about */
+/* ========== about ========== */
 .about {
     height: auto; width: 100%;
     padding: 2rem 0;
@@ -186,11 +187,9 @@ p {text-transform: none;}
     height: calc(100vh - 20rem);
     margin: 2rem 0 5rem;
     display: flex;
-
-    border: none;
 }
 
-/* about container-1 */
+/* ===== about container-1 ===== */
 .about .container:nth-child(2) {
     display: grid; flex-direction: row;
     grid-template-columns: repeat(3, calc(100% / 3));
@@ -205,18 +204,22 @@ p {text-transform: none;}
     height: 10rem; width: auto; padding: 10px;
     display: flex; object-fit: scale-down;
 }
-.about .container:nth-child(2) .content h1 {font-size: 1.6rem; font-weight: 400; opacity: 0.95;}
+.about .container:nth-child(2) .content h1 {
+    font-size: 1.6rem; font-weight: 400; opacity: 0.95;
+}
 .about .container:nth-child(2) .content p {
     font-size: 1.3rem; font-weight: 400;
     flex-grow: 1; opacity: 0.8;
 }
 
-/* about container-2 */
+/* ===== about container-2 ===== */
 .about .container:nth-child(2)~.container {
     height: calc(100vh - 15rem);
     display: flex;
 }
-.about .container:nth-child(2)~.container img {height: auto; width: 55%; object-fit: contain;}
+.about .container:nth-child(2)~.container img {
+    height: auto; width: 55%; object-fit: contain;
+}
 .about .container:nth-child(2)~.container .content {
     display: flex; width: 45%;
     flex-direction: column; padding: 0 3rem; justify-items: center; justify-content: center;
@@ -247,7 +250,9 @@ p {text-transform: none;}
     width: 100% !important; padding: 0 0 !important;
     flex-grow: 0 !important; flex-direction: row !important; justify-content: right !important; align-items: center;
 }
-.about .container-2 .content div {width: auto; display: flex; flex-direction: column;}
+.about .container-2 .content div {
+    width: auto; display: flex; flex-direction: column;
+}
 .about .container-2 .content div h1 {
     justify-content: flex-end; opacity: 0.95;  padding: 0;
     align-items: flex-end; letter-spacing: 0.15rem;
@@ -256,19 +261,19 @@ p {text-transform: none;}
 .about .container-2 .content div h2 {
     justify-content: flex-end; opacity: 0.8; font-size: 1.2em;
 }
-.about .container-2 .content img {height: 100% !important; width: 8em !important; padding-left: 0.5rem;}
-
-/* learn */
-.learn {
-    height: 200vh; width: 100%;
-    padding: 2rem 0;
+.about .container-2 .content img {
+    height: 100% !important; width: 8em !important; padding-left: 0.5rem;
 }
 
-.learn {flex-direction: column; padding: 0 10%; height: auto;}
+/* ========== learn ========== */
+.learn {
+    flex-direction: column; padding: 0 10%; height: auto;  width: 100%;
+}
+
+/* ===== learn article-1 ===== */
 .learn article {
     display: flex; flex-direction: column; gap: 2rem; position: relative; padding: 1.5rem 0;
 }
-
 .learn article .box {
     position: relative; background: #fff; width: 22.5rem; height: 7.5rem; margin: 0 auto;
     display: flex; justify-items: center; 
@@ -287,18 +292,24 @@ p {text-transform: none;}
 .learn article .box:hover::before {
     width: 100%;
 }
-.learn article .box .content {position: relative; display: flex; align-items: center; height: 100%;}
+.learn article .box .content {
+    position: relative; display: flex; align-items: center; height: 100%;
+}
 .learn article .box .content i {
     position: relative; min-width: 5rem; display: flex; transition: 0.3s ease-in-out;
     justify-content: center; align-items: center; color: var(--clr);
 }
 .learn article .box:hover .content i {color: #fff;}
-.learn article .box .content div h3 {font-weight: 500; color: var(--clr); transition: 0.4s ease-in-out}
-.learn article .box .content div p {font-size: 0.9em; color: #999; transition: 0.3s ease-in-out}
+.learn article .box .content div h3 {
+    font-weight: 500; color: var(--clr); transition: 0.4s ease-in-out
+}
+.learn article .box .content div p {
+    font-size: 0.9em; color: #999; transition: 0.3s ease-in-out
+}
 .learn article .box:hover .content div h3 {color: #fff;}
 .learn article .box:hover .content div p {color: #fff;}
 
-/* learn article */
+/* ===== learn article-2 ===== */
 .learn article:nth-child(2)~article h1.heading {color: var(--clr); position: relative;}
 .learn article:nth-child(2)~article h1.heading div {position: relative; transition: 0.5s ease-in-out;}
 .learn article:nth-child(2)~article i {padding: 0 1rem;}
@@ -308,6 +319,7 @@ p {text-transform: none;}
     position: absolute; width: 0.35rem; height: inherit; left: 0;
     background: var(--clr); transition: 0.3s ease-in-out;
 }
+
 .learn article:nth-child(2)~article h1.heading:hover::before {width: 100%;}
 .learn article:nth-child(2)~article h1.heading:hover {color: #fff;}
 .learn article:nth-child(2)~article h1.heading:hover span {color: #fff;}
@@ -316,13 +328,13 @@ p {text-transform: none;}
 .learn article:nth-child(2)~article h1.heading.active {color: #fff !important;}
 .learn article:nth-child(2)~article h1.heading.active span {color: #fff;}
 
-/* learn_1 */
 .learn article:nth-child(2)~article ul {
     padding: 0.2rem 0rem 0 3rem; 
     display: flex; flex-direction: column; align-items: center;
 }
 .learn article:nth-child(2)~article ul li {
-    font-size: 1.5rem; list-style: none; width: 100%; font-weight: 500; padding: 0 1rem; text-transform: none;
+    font-size: 1.5rem; list-style: none; width: 100%;
+    padding: 0 1rem; text-transform: none; font-weight: 500;
     display: flex; align-items: center; justify-content: space-between; gap: 0 1rem;
 }
 .learn article:nth-child(2)~article ul li::before {
@@ -333,54 +345,50 @@ p {text-transform: none;}
     background: var(--clr);
 }
 .learn article:nth-child(2)~article ul li label {
-    display: flex; flex-direction: column; font-size: 1.5rem; flex-grow: 1; padding: 1rem 0;
+    display: flex; flex-direction: column; font-size: 1.5rem; flex-grow: 1; padding: 1rem;
 }
 .learn article:nth-child(2)~article ul li input {
     height: 1.8rem; width: 1.8rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* comunity */
+/* ========== comunity ========== */
 .comunity {
     height: calc(100vh - 5rem- 5rem); width: 60%;
     padding: 0.5rem 0 3rem 0; flex-direction: column;
 }
-.comunity h1.heading {margin-bottom: 0.5rem; background: #8295BA; width: 98%;}
+.comunity h1.heading {
+    margin-bottom: 0.5rem; background: #8295BA; width: 98%;
+}
 .comunity h1.heading:hover {background: var(--main-color);}
 .comunity h1.heading:hover span {color: #8295BA;}
 .comunity h1 {margin-bottom: 0.5rem;}
 .comunity .chanel {
     flex-grow: 1; height: 50vh; overflow-y: scroll; overflow-x: hidden;
 }
-.comunity .chanel .search {position: absolute; background: #eeefff; width: 50%;}
+.comunity .chanel .search {
+    position: absolute; background: #eeefff; width: 50%;
+}
 .comunity .chanel div {display: flex; flex-direction: row;}
 .comunity .chanel ul li {list-style: none;}
 
 .comunity .chanel #search {width: 100%; margin: 1rem;}
-.comunity .chanel label, .comunity .chanel i {display: flex; align-items: center; cursor: pointer; padding-right: 1rem;}
+.comunity .chanel label, .comunity .chanel i {
+    display: flex; align-items: center; cursor: pointer; padding-right: 1rem;
+}
 .comunity .chanel label:hover, 
 .comunity .chanel i:hover {color: var(--main-color);}
 
 .comunity .chanel #names {flex-grow: 1; margin-top: 5rem;}
-.comunity .chanel #names .chat li {display: flex; flex-direction: row; background: #fff; margin: 0.5rem 1rem; padding-right: 1rem;}
+.comunity .chanel #names .chat li {
+    display: flex; flex-direction: row; background: #fff; margin: 0.5rem 1rem; padding-right: 1rem;
+}
 .comunity .chanel #names div {display: flex; flex-direction: column; flex-grow: 1;}
 .comunity .chanel #names div a {color: var(--txt); font-size: 1.35rem; display: flex; height: 2rem;}
 .comunity .chanel #names i:hover {color: var(--main-color);}
 
 .comunity .chanel #names img {height: 5rem; width: 5rem; padding: 0.5rem; border-radius: 50%;}
 
-/* aside */
+/* ========== aside ========== */
 aside {
     height: calc(100vh - 5rem - 5rem); width: 39%;
     padding: 0.5rem 0 0 0;
@@ -391,6 +399,8 @@ a:visited {color: var(--black);}
 aside h1.heading {margin-bottom: 0.5rem; background: #8295BA;}
 aside h1.heading:hover {background: var(--main-color);}
 aside h1.heading:hover span {color: #8295BA;}
+
+/* ===== aside login ===== */
 aside .content {
     height: 10%; width: 100%;
     padding: 0 5%; margin-bottom: 0.5rem;
@@ -417,13 +427,11 @@ aside button {
     height: 3rem; width: 100%;
     margin: 5% auto 0 auto;
 }
-
-/* login */
 aside .login{
     display: flex; flex-direction: column;
 }
 
-/* profill */
+/* ===== aside profill ===== */
 aside .user{
     display: flex; flex-direction: column;
     padding: 1rem 2rem;
@@ -525,17 +533,6 @@ footer h1 {color: #8295BA !important; opacity: 0.9;}
 }
 
 @media (max-width:350px) {
-    /* html {visibility: hidden;} */
     html {font-size: 40%;}
     .about .container-2 h1 {font-size: 2.4rem;}
 }
-
-/* ###### */
-/* img {height: 5rem !important;} */
-img {height: 100%;}
-/* div, .navbar {border: var(--brd);} */
-
-/* .about .container:nth-child(2)~.container {border: var(--brd);} */
-/* #menu-btn {
-    border: var(--brd);
-} */

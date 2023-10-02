@@ -18,6 +18,7 @@ var dataUser;
 function defaultContent() {
   username = "ariafatah0711";
   foundChat();
+  deleteChat();
   var xhr = new XMLHttpRequest();
   let url = "https://api.github.com/users/ariafatah0711";
   xhr.onloadend = function () {
@@ -54,6 +55,7 @@ function defaultContent() {
 // loadContent => mengambil api github user
 function loadContent() {
   foundChat();
+  deleteChat();
   var xhr = new XMLHttpRequest();
   let url = "https://api.github.com/users/" + username;
 

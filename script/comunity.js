@@ -33,10 +33,11 @@ function addChat() {
                 <a>${username}</a>
                 <p>${teksPesan}</p>
             </div>
-            <i class="fa-solid fa-trash fa-2x" onclick="deleteChat()"></i>
+            <i class="fa-solid fa-trash fa-2x"></i>
         </li>
         `;
       chat.appendChild(addedChat);
+      deleteChat();
     }
   } else {
     alert(`anda belum login`);
