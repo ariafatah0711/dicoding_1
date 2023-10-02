@@ -44,6 +44,12 @@ const Method = {
   log: function () {
     alredyLog = false;
   },
+  foundChat: function () {
+    let icon = document.querySelectorAll(`#names .chat i`);
+    for (let i = 0; i < icon.length; i++) {
+      icon[i].classList.remove(`fa-trash`);
+    }
+  },
 };
 
 // login => untuk simulasi login dan menampilkan logo profil
@@ -83,6 +89,7 @@ function logout() {
     if (exit) {
       console.info(`keluar dengan ${username} telah berhasil!`);
       Method.hide();
+      Method.foundChat();
       alredyLog = false;
     }
   }

@@ -16,6 +16,8 @@ var dataUser;
 // ===== API GITHUB =====
 // defaultContent => kalo username nya tidak ditemukan akan otomatis ke github ariafatah0711
 function defaultContent() {
+  username = "ariafatah0711";
+  foundChat();
   var xhr = new XMLHttpRequest();
   let url = "https://api.github.com/users/ariafatah0711";
   xhr.onloadend = function () {
@@ -51,6 +53,7 @@ function defaultContent() {
 
 // loadContent => mengambil api github user
 function loadContent() {
+  foundChat();
   var xhr = new XMLHttpRequest();
   let url = "https://api.github.com/users/" + username;
 

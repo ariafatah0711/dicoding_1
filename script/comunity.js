@@ -19,6 +19,7 @@ function search() {
 
 // ===== addChat =====
 function addChat() {
+  // foundChat();
   if (alredyLog === true) {
     teksPesan = prompt(`pesan: `);
     if (teksPesan !== false && teksPesan !== "" && teksPesan !== null) {
@@ -32,11 +33,38 @@ function addChat() {
                 <a>${username}</a>
                 <p>${teksPesan}</p>
             </div>
+            <i class="fa-solid fa-trash fa-2x" onclick="deleteChat()"></i>
         </li>
         `;
       chat.appendChild(addedChat);
     }
   } else {
     alert(`anda belum login`);
+  }
+}
+
+function foundChat() {
+  let chat = document.querySelectorAll(`#names .chat div a`);
+  let icon = document.querySelectorAll(`#names .chat i`);
+
+  for (let i = 0; i < chat.length; i++) {
+    chat[i].textContent;
+    if (chat[i].textContent == username) {
+      icon[i].classList.add(`fa-trash`);
+    } else {
+      icon[i].classList.remove(`fa-trash`);
+    }
+  }
+}
+foundChat();
+
+function deleteChat() {
+  let chat = document.querySelectorAll(`#names .chat`);
+  let icon = document.querySelectorAll(`#names .chat i`);
+
+  for (let i = 0; i < chat.length; i++) {
+    icon[i].addEventListener(`click`, function () {
+      chat[i].remove();
+    });
   }
 }

@@ -79,6 +79,7 @@ for (let i of learnItem) {
     learn_3.classList.remove(`active`);
   });
 }
+
 for (let i of aAll) {
   i.addEventListener(`mouseleave`, function () {
     let learn_1 = document.querySelector(`#learn_1 h1`);

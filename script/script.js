@@ -38,9 +38,9 @@ function reloadPage() {
   } else if (myLoc.hash.endsWith(`#home`)) {
     Page.scrollToElement("#home");
   } else if (myLoc.pathname.endsWith(`/index.html`)) {
+    myLoc.hash = "#home";
     Page.scrollToElement("#home");
   } else {
-    // myLoc.hash = "#home";
     Page.scrollToElement("#home");
   }
 
