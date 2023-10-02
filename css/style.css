@@ -50,6 +50,11 @@ button:hover::after {
     position: absolute;
     border: 0.2rem solid var(--txt); border-radius: 0.5rem;
 }
+/* menghilangkan efek biru pada saat klik link di mobile */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight-color: transparent;
+}
 /* select text */
 *:not(input)::selection {
     background: transparent; color: inherit;
