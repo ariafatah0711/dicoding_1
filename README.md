@@ -1,5 +1,5 @@
-## #1. belajar dasar pemograman web
-date: 02 - OKT - 2023 <br>
+## #1. Belajar Dasar Pemograman Web
+date: 03 - OKT - 2023 <br>
 time: 7 days <br>
 by  : ariafatah <br>
 
