@@ -4,7 +4,7 @@ time: 7 days <br>
 by  : ariafatah <br>
 
 <a href="https://www.dicoding.com/certificates/53XE4Q21KZRN">id kredensial</a><br>
-<a href="https://www.dicoding.com/certificates/53XE4Q21KZRN">DEMO WEB</a>
+<a href="https://ariafatah0711.github.io/dicoding_1/">DEMO WEB</a>
 
 <hr>
 
