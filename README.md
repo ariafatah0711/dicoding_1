@@ -19,15 +19,29 @@
 
 ## 📋 Table of Contents
 <details>
-  <summary><b>How Im create this</b></summary>
+  <summary><b>Checklist</b></summary>
 
-  - 
+  - [✔️] Header, Footer, Main, Article, and Aside elements have been included.
+  - [✔️] Each element contains content appropriate to its function, following the semantic HTML concept in building the website structure. For example, the Header contains the title and navigation.
+  - [✔️] Display an image within the Aside element, with the image created using the img element.
+  - [✔️] The layout is arranged using the flexbox technique, not float.
 </details>
 
 <details>
-  <summary><b>What this web can do</b></summary>
+  <summary><b>How I Created This Web</b></summary>
 
-  - 
+  - The design was created without using Figma.
+  - The inspiration for this web comes from Khan Academy, and some images/assets are also adopted from there.
+  - JavaScript is used only with the concepts I understand and learn, with additional insights from learning sources on YouTube and contributions from ChatGPT.
+</details>
+
+<details>
+  <summary><b>What This Web Can Do</b></summary>
+
+  - A login system is created by fetching the GitHub API that corresponds to the username.
+  - Profile display is added, along with the feature to change the user in the profile and the log-out option.
+  - A community feature for chat is also added, but data will be reset after a refresh.
+  - Please note that this login system does not use local storage, so it will be automatically cleared upon refresh.
 </details>
 
 <p id="download"></p>
@@ -50,4 +64,4 @@ git clone https://github.com/ariafatah0711/dicoding_1.git
 
 ## ©️ license
 <a href="https://github.com/ariafatah0711" alt="CREATED"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=CREATED%20BY&message=ariafatah0711&color=000000"></a>
-<a href="https://github.com/ariafatah0711/ariafatah0711/blob/main/LICENSE" alt="LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=APACHE&color=000000"></a>
+<a href="https://github.com/ariafatah0711/dicoding_1/blob/main/LICENSE" alt="LICENSE"><img src="https://img.shields.io/static/v1?style=for-the-badge&label=LICENSE&message=APACHE&color=000000"></a>
